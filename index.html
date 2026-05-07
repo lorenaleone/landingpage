@@ -35,7 +35,7 @@
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{
   font-family:'Inter',sans-serif;
-  font-size:16px;
+  font-size:14px;
   line-height:1.6;
   color:var(--ink-800);
   background:var(--sand-50);
@@ -147,10 +147,10 @@ h1,h2,h3{
   display:inline-flex;
   align-items:center;
   gap:.5rem;
-  padding:.85rem 1.6rem;
+  padding:.65rem 1.25rem;
   border-radius:999px;
   font-weight:600;
-  font-size:.92rem;
+  font-size:.85rem;
   transition:all .25s ease;
   white-space:nowrap;
 }
@@ -187,10 +187,10 @@ h1,h2,h3{
 /* ============ HERO ============ */
 .hero{
   position:relative;
-  min-height:100vh;
+  min-height:88vh;
   display:flex;
   align-items:center;
-  padding:7rem 0 4rem;
+  padding:5rem 0 3rem;
   overflow:hidden;
   background:
     radial-gradient(ellipse at 80% 20%, rgba(232,176,74,.18) 0%, transparent 50%),
@@ -207,8 +207,8 @@ h1,h2,h3{
 
 .hero-content{position:relative;z-index:2}
 .hero h1{
-  font-size:clamp(2.5rem, 5.5vw, 4.5rem);
-  margin:1.5rem 0 1.5rem;
+  font-size:clamp(1.8rem, 4vw, 3rem);
+  margin:1rem 0 1rem;
   font-weight:500;
 }
 .hero h1 em{
@@ -217,24 +217,24 @@ h1,h2,h3{
   color:var(--sun-500);
 }
 .hero-lede{
-  font-size:1.15rem;
+  font-size:1rem;
   color:var(--ink-700);
   max-width:520px;
-  margin-bottom:2.5rem;
+  margin-bottom:1.75rem;
   line-height:1.6;
 }
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
 
 .hero-meta{
   display:flex;
-  gap:2.5rem;
-  margin-top:3.5rem;
-  padding-top:2rem;
+  gap:1.75rem;
+  margin-top:2rem;
+  padding-top:1.25rem;
   border-top:1px solid var(--line);
 }
 .meta-item .num{
   font-family:'Fraunces',serif;
-  font-size:2rem;
+  font-size:1.5rem;
   font-weight:600;
   color:var(--ink-900);
   line-height:1;
@@ -305,18 +305,18 @@ h1,h2,h3{
 }
 
 /* ============ SEÇÕES GERAIS ============ */
-section{padding:6rem 0;position:relative}
+section{padding:4rem 0;position:relative}
 .section-header{
   max-width:720px;
-  margin:0 auto 4rem;
+  margin:0 auto 2.5rem;
   text-align:center;
 }
 .section-header h2{
-  font-size:clamp(2rem, 4vw, 3.2rem);
-  margin:1rem 0 1rem;
+  font-size:clamp(1.5rem, 3vw, 2.4rem);
+  margin:.75rem 0 .75rem;
 }
 .section-header p{
-  font-size:1.08rem;
+  font-size:.95rem;
   color:var(--ink-700);
   line-height:1.65;
 }
@@ -445,7 +445,7 @@ section{padding:6rem 0;position:relative}
   overflow:hidden;
 }
 .serv-item{
-  padding:2.5rem 2rem;
+  padding:1.75rem 1.5rem;
   border-right:1px solid rgba(255,255,255,.08);
   border-bottom:1px solid rgba(255,255,255,.08);
   transition:all .3s;
@@ -582,7 +582,7 @@ section{padding:6rem 0;position:relative}
 
 .depo-card{
   background:white;
-  padding:2.5rem;
+  padding:1.75rem;
   border-radius:20px;
   border:1px solid var(--line);
   position:relative;
@@ -659,7 +659,7 @@ section{padding:6rem 0;position:relative}
 .contato{
   background:var(--ink-900);
   color:white;
-  padding:6rem 0;
+  padding:4rem 0;
   position:relative;
   overflow:hidden;
 }
@@ -748,7 +748,7 @@ section{padding:6rem 0;position:relative}
 .form-card{
   background:white;
   color:var(--ink-800);
-  padding:2.5rem;
+  padding:1.75rem;
   border-radius:24px;
   box-shadow:var(--shadow-lg);
 }
