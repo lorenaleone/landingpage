@@ -256,14 +256,17 @@ h1,h2,h3{
   box-shadow:var(--shadow-lg);
   background:linear-gradient(135deg, #FFB870 0%, #E85D2C 50%, #1B3A5C 100%);
 }
-.hero-visual::before{
+.hero-visual-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.hero-visual::after{
   content:'';
   position:absolute;inset:0;
-  background:
-    radial-gradient(circle at 70% 30%, rgba(255,220,150,.4) 0%, transparent 40%),
-    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500"><defs><linearGradient id="dunes" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%23F5A872"/><stop offset="100%25" stop-color="%23C8471D"/></linearGradient><linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop offset="0%25" stop-color="%2378C8E8"/><stop offset="100%25" stop-color="%233FA9D1"/></linearGradient></defs><circle cx="280" cy="150" r="55" fill="%23FFE5A0" opacity=".95"/><path d="M0,300 Q100,260 200,290 T400,280 L400,500 L0,500 Z" fill="url(%23dunes)"/><ellipse cx="100" cy="380" rx="80" ry="20" fill="url(%23water)" opacity=".85"/><ellipse cx="280" cy="420" rx="100" ry="22" fill="url(%23water)" opacity=".85"/></svg>');
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(180deg, rgba(10,31,51,.15) 0%, rgba(10,31,51,.5) 100%);
+  pointer-events:none;
 }
 .hero-visual-overlay{
   position:absolute;
@@ -359,12 +362,15 @@ section{padding:6rem 0;position:relative}
 }
 .dest-card:hover::before{transform:scale(1.08)}
 
-.dest-card.lencois::before{background:linear-gradient(135deg,#3FA9D1 0%, #F5A872 50%, #C8471D 100%)}
-.dest-card.jeri::before{background:linear-gradient(135deg,#E85D2C 0%, #E8B04A 100%)}
-.dest-card.delta::before{background:linear-gradient(135deg,#1B3A5C 0%, #3FA9D1 100%)}
-.dest-card.barra::before{background:linear-gradient(135deg,#E8B04A 0%, #F5A872 100%)}
-.dest-card.sao-luis::before{background:linear-gradient(135deg,#102A45 0%, #1B3A5C 50%, #E85D2C 100%)}
-.dest-card.fortaleza::before{background:linear-gradient(135deg,#3FA9D1 0%, #1B3A5C 100%)}
+.dest-card.lencois::before{background:url('assets/barreirinhas.jpg') center/cover no-repeat, linear-gradient(135deg,#3FA9D1 0%, #F5A872 50%, #C8471D 100%)}
+.dest-card.jeri::before{background:url('assets/jericoacoara.jpg') center/cover no-repeat, linear-gradient(135deg,#E85D2C 0%, #E8B04A 100%)}
+.dest-card.delta::before{background:url('assets/parnaiba.jpg') center/cover no-repeat, linear-gradient(135deg,#1B3A5C 0%, #3FA9D1 100%)}
+.dest-card.barra::before{background:url('assets/barragrande.jpg') center/cover no-repeat, linear-gradient(135deg,#E8B04A 0%, #F5A872 100%)}
+.dest-card.sao-luis::before{background:url('assets/saoluis.jpg') center/cover no-repeat, linear-gradient(135deg,#102A45 0%, #1B3A5C 50%, #E85D2C 100%)}
+.dest-card.fortaleza::before{background:url('assets/fortaleza.jpg') center/cover no-repeat, linear-gradient(135deg,#3FA9D1 0%, #1B3A5C 100%)}
+.dest-card.tutoia::before{background:url('assets/tutoia.jpg') center/cover no-repeat, linear-gradient(135deg,#E8B04A 0%, #3FA9D1 100%)}
+.dest-card.santoamaro::before{background:url('assets/santoamaro.jpg') center/cover no-repeat, linear-gradient(135deg,#F5A872 0%, #C8471D 100%)}
+.dest-card.camocim::before{background:url('assets/camocim.jpg') center/cover no-repeat, linear-gradient(135deg,#3FA9D1 0%, #E85D2C 100%)}
 
 .dest-card .dest-tag{
   position:absolute;
@@ -1019,6 +1025,7 @@ footer{
       </div>
 
       <div class="hero-visual">
+        <img src="assets/barreirinhas.jpg" alt="Lençóis Maranhenses" class="hero-visual-img">
         <div class="hero-decoration"></div>
         <div class="hero-decoration-2"></div>
         <div class="hero-visual-overlay">
@@ -1101,14 +1108,47 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card fortaleza medium reveal">
+      <div class="dest-card fortaleza small reveal">
         <span class="dest-tag">Ceará</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
         </div>
         <div>
-          <h3>Fortaleza · Camocim</h3>
-          <p>Conexão completa com aeroporto de Fortaleza e principais praias do litoral cearense.</p>
+          <h3>Fortaleza</h3>
+          <p>Conexão com o aeroporto e principais praias do litoral cearense.</p>
+        </div>
+      </div>
+
+      <div class="dest-card tutoia small reveal">
+        <span class="dest-tag">Maranhão</span>
+        <div class="dest-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+        </div>
+        <div>
+          <h3>Tutóia</h3>
+          <p>Portal dos Lençóis pelo Piauí, acesso ao Delta do Parnaíba.</p>
+        </div>
+      </div>
+
+      <div class="dest-card santoamaro small reveal">
+        <span class="dest-tag">Maranhão</span>
+        <div class="dest-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+        </div>
+        <div>
+          <h3>Santo Amaro</h3>
+          <p>Vilarejo nos Lençóis com dunas e lagoas de acesso exclusivo.</p>
+        </div>
+      </div>
+
+      <div class="dest-card camocim featured reveal">
+        <span class="dest-tag">Ceará · Litoral Oeste</span>
+        <div class="dest-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+        </div>
+        <div>
+          <h3>Camocim</h3>
+          <p>Ponto de conexão entre Jericoacoara e o sertão cearense — praias desertas, lagoas e kitesurf.</p>
         </div>
       </div>
     </div>
