@@ -187,10 +187,10 @@ h1,h2,h3{
 /* ============ HERO ============ */
 .hero{
   position:relative;
-  min-height:88vh;
+  min-height:auto;
   display:flex;
   align-items:center;
-  padding:5rem 0 3rem;
+  padding:4rem 0 3rem;
   overflow:hidden;
   background:
     radial-gradient(ellipse at 80% 20%, rgba(232,176,74,.18) 0%, transparent 50%),
@@ -200,15 +200,15 @@ h1,h2,h3{
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:4rem;
+  grid-template-columns:1fr;
+  gap:3rem;
   align-items:center;
 }
 
 .hero-content{position:relative;z-index:2}
 .hero h1{
-  font-size:clamp(1.8rem, 4vw, 3rem);
-  margin:1rem 0 1rem;
+  font-size:clamp(1.5rem, 3vw, 2.2rem);
+  margin:.75rem 0 .75rem;
   font-weight:500;
 }
 .hero h1 em{
@@ -217,10 +217,10 @@ h1,h2,h3{
   color:var(--sun-500);
 }
 .hero-lede{
-  font-size:1rem;
+  font-size:.95rem;
   color:var(--ink-700);
   max-width:520px;
-  margin-bottom:1.75rem;
+  margin-bottom:1.5rem;
   line-height:1.6;
 }
 .hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
@@ -249,12 +249,7 @@ h1,h2,h3{
 
 /* Hero Visual */
 .hero-visual{
-  position:relative;
-  aspect-ratio:4/5;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:var(--shadow-lg);
-  background:linear-gradient(135deg, #FFB870 0%, #E85D2C 50%, #1B3A5C 100%);
+  display:none;
 }
 .hero-visual-img{
   position:absolute;inset:0;
@@ -305,15 +300,15 @@ h1,h2,h3{
 }
 
 /* ============ SEÇÕES GERAIS ============ */
-section{padding:4rem 0;position:relative}
+section{padding:3.5rem 0;position:relative}
 .section-header{
   max-width:720px;
-  margin:0 auto 2.5rem;
+  margin:0 auto 2rem;
   text-align:center;
 }
 .section-header h2{
-  font-size:clamp(1.5rem, 3vw, 2.4rem);
-  margin:.75rem 0 .75rem;
+  font-size:clamp(1.3rem, 2.5vw, 1.95rem);
+  margin:.6rem 0 .6rem;
 }
 .section-header p{
   font-size:.95rem;
@@ -684,8 +679,8 @@ section{padding:4rem 0;position:relative}
 
 .contato h2{
   color:white;
-  font-size:clamp(2rem, 4vw, 3.4rem);
-  margin:1rem 0 1.5rem;
+  font-size:clamp(1.4rem, 3vw, 2.2rem);
+  margin:.8rem 0 1rem;
 }
 .contato h2 em{
   font-style:italic;
@@ -693,10 +688,10 @@ section{padding:4rem 0;position:relative}
   font-weight:400;
 }
 .contato-lede{
-  font-size:1.1rem;
+  font-size:1rem;
   color:rgba(255,255,255,.8);
   line-height:1.65;
-  margin-bottom:2.5rem;
+  margin-bottom:2rem;
 }
 
 .contato-channels{
