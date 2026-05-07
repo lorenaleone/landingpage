@@ -105,10 +105,18 @@ h1,h2,h3{
   letter-spacing:.02em;
 }
 .brand img{
-  width:46px;
-  height:46px;
+  width:38px;
+  height:38px;
   object-fit:contain;
 }
+.logo-mark{
+  width:38px;height:38px;
+  display:inline-flex;
+  flex-shrink:0;
+  filter:drop-shadow(0 2px 6px rgba(232,93,44,.25));
+}
+.logo-mark svg{width:100%;height:100%}
+.logo-mark-lg{width:44px;height:44px}
 .brand-text small{
   display:block;
   font-family:'Inter',sans-serif;
@@ -440,7 +448,7 @@ section{padding:3.5rem 0;position:relative}
   overflow:hidden;
 }
 .serv-item{
-  padding:1.75rem 1.5rem;
+  padding:1.25rem 1.1rem;
   border-right:1px solid rgba(255,255,255,.08);
   border-bottom:1px solid rgba(255,255,255,.08);
   transition:all .3s;
@@ -454,37 +462,38 @@ section{padding:3.5rem 0;position:relative}
 .serv-item:hover .serv-icon{
   background:var(--sun-500);
   color:white;
-  transform:rotate(-5deg) scale(1.05);
 }
 
 .serv-icon{
-  width:54px;height:54px;
-  border-radius:12px;
-  background:rgba(232,176,74,.15);
+  width:38px;height:38px;
+  border-radius:9px;
+  background:rgba(232,176,74,.12);
   color:var(--gold-400);
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:1.5rem;
+  margin-bottom:.9rem;
   transition:all .3s ease;
 }
+.serv-icon svg{width:18px;height:18px}
 .serv-item h3{
   color:white;
-  font-size:1.25rem;
-  margin-bottom:.6rem;
+  font-size:.98rem;
+  margin-bottom:.35rem;
   font-weight:600;
+  letter-spacing:-.01em;
 }
 .serv-item p{
-  font-size:.95rem;
-  color:rgba(255,255,255,.7);
-  line-height:1.6;
+  font-size:.82rem;
+  color:rgba(255,255,255,.62);
+  line-height:1.55;
 }
 .serv-num{
   position:absolute;
-  top:1.5rem;right:1.5rem;
+  top:1.1rem;right:1.1rem;
   font-family:'Fraunces',serif;
-  font-size:.85rem;
-  color:rgba(255,255,255,.3);
+  font-size:.7rem;
+  color:rgba(255,255,255,.25);
   font-weight:500;
   letter-spacing:.05em;
 }
@@ -566,65 +575,98 @@ section{padding:3.5rem 0;position:relative}
 }
 .frota-feat svg{color:var(--sun-500)}
 
-/* ============ DEPOIMENTOS ============ */
-.depo{background:var(--sand-50)}
+/* ============ DEPOIMENTOS — COVERFLOW ============ */
+.depo{background:var(--sand-50);overflow:hidden}
 
-.depo-grid{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
-  gap:2rem;
+.depo-coverflow{
+  position:relative;
+  height:280px;
+  perspective:1400px;
+  margin:1rem 0 1.5rem;
+}
+.depo-track{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
 }
 
 .depo-card{
+  position:absolute;
+  top:50%;left:50%;
+  width:340px;
   background:white;
-  padding:1.75rem;
-  border-radius:20px;
+  padding:1.25rem 1.4rem;
+  border-radius:14px;
   border:1px solid var(--line);
-  position:relative;
-  transition:all .3s;
+  box-shadow:var(--shadow-sm);
+  transition:transform .55s cubic-bezier(.2,.8,.2,1), opacity .55s ease, box-shadow .4s ease;
+  cursor:pointer;
+  backface-visibility:hidden;
 }
-.depo-card:hover{
-  border-color:var(--sun-300);
-  transform:translateY(-3px);
-  box-shadow:var(--shadow-md);
+.depo-card[data-pos="0"]{
+  transform:translate(-50%,-50%) translateZ(0) rotateY(0);
+  opacity:1;z-index:5;
+  box-shadow:var(--shadow-lg);
+}
+.depo-card[data-pos="-1"]{
+  transform:translate(-50%,-50%) translateX(-260px) translateZ(-180px) rotateY(28deg);
+  opacity:.55;z-index:3;
+}
+.depo-card[data-pos="1"]{
+  transform:translate(-50%,-50%) translateX(260px) translateZ(-180px) rotateY(-28deg);
+  opacity:.55;z-index:3;
+}
+.depo-card[data-pos="-2"]{
+  transform:translate(-50%,-50%) translateX(-440px) translateZ(-340px) rotateY(35deg);
+  opacity:.18;z-index:1;
+}
+.depo-card[data-pos="2"]{
+  transform:translate(-50%,-50%) translateX(440px) translateZ(-340px) rotateY(-35deg);
+  opacity:.18;z-index:1;
 }
 
 .depo-quote{
   font-family:'Fraunces',serif;
-  font-size:5rem;
+  font-size:2.5rem;
   color:var(--sun-500);
   line-height:1;
   position:absolute;
-  top:1rem;left:1.75rem;
-  opacity:.18;
+  top:.5rem;left:1rem;
+  opacity:.14;
 }
 
 .stars{
   display:flex;
-  gap:2px;
-  margin-bottom:1.25rem;
+  gap:1px;
+  margin-bottom:.6rem;
   color:var(--gold-400);
 }
+.stars svg{width:12px;height:12px}
 
 .depo-text{
   font-family:'Fraunces',serif;
-  font-size:1.15rem;
-  line-height:1.55;
+  font-size:.9rem;
+  line-height:1.5;
   color:var(--ink-800);
   font-weight:400;
-  margin-bottom:1.75rem;
+  margin-bottom:.9rem;
   font-style:italic;
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
 }
 
 .depo-author{
   display:flex;
   align-items:center;
-  gap:1rem;
-  padding-top:1.25rem;
+  gap:.65rem;
+  padding-top:.7rem;
   border-top:1px solid var(--line);
 }
 .author-avatar{
-  width:48px;height:48px;
+  width:32px;height:32px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -632,8 +674,50 @@ section{padding:3.5rem 0;position:relative}
   font-family:'Fraunces',serif;
   font-weight:600;
   color:white;
-  font-size:1.1rem;
+  font-size:.78rem;
+  flex-shrink:0;
 }
+
+.depo-controls{
+  display:flex;
+  justify-content:center;
+  gap:.5rem;
+  margin-top:1rem;
+}
+.depo-dot{
+  width:7px;height:7px;
+  border-radius:50%;
+  background:var(--ink-300);
+  border:none;
+  padding:0;
+  cursor:pointer;
+  transition:all .3s;
+}
+.depo-dot.active{
+  background:var(--sun-500);
+  width:22px;
+  border-radius:4px;
+}
+.depo-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:36px;height:36px;
+  border-radius:50%;
+  background:white;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  z-index:10;
+  color:var(--ink-700);
+  box-shadow:var(--shadow-sm);
+  transition:all .3s;
+}
+.depo-nav:hover{background:var(--sun-500);color:white;border-color:var(--sun-500)}
+.depo-nav.prev{left:1rem}
+.depo-nav.next{right:1rem}
 .av-1{background:linear-gradient(135deg,#E85D2C,#C8471D)}
 .av-2{background:linear-gradient(135deg,#1B3A5C,#3FA9D1)}
 .av-3{background:linear-gradient(135deg,#E8B04A,#C8471D)}
@@ -697,46 +781,52 @@ section{padding:3.5rem 0;position:relative}
 .contato-channels{
   display:flex;
   flex-direction:column;
-  gap:1rem;
+  gap:.55rem;
 }
 .channel{
   display:flex;
   align-items:center;
-  gap:1rem;
-  padding:1rem 1.25rem;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;
+  gap:.85rem;
+  padding:.7rem .9rem;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;
   transition:all .3s;
 }
 .channel:hover{
-  background:rgba(255,255,255,.1);
-  border-color:rgba(255,255,255,.2);
-  transform:translateX(4px);
+  background:rgba(255,255,255,.07);
+  border-color:rgba(255,255,255,.15);
+  transform:translateX(3px);
 }
 .channel-icon{
-  width:44px;height:44px;
-  border-radius:10px;
+  width:30px;height:30px;
+  border-radius:7px;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-shrink:0;
 }
-.ch-wpp{background:#25D366;color:white}
-.ch-mail{background:var(--sun-500);color:white}
-.ch-insta{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white}
-.channel div{flex:1}
+.channel-icon svg{width:15px;height:15px}
+.ch-wpp{background:rgba(37,211,102,.15);color:#25D366}
+.ch-mail{background:rgba(232,93,44,.15);color:var(--sun-300)}
+.ch-insta{background:rgba(220,39,67,.15);color:#e6683c}
+.channel div{flex:1;min-width:0}
 .channel small{
   display:block;
-  font-size:.7rem;
+  font-size:.62rem;
   text-transform:uppercase;
   letter-spacing:.1em;
-  color:rgba(255,255,255,.55);
-  margin-bottom:.15rem;
+  color:rgba(255,255,255,.45);
+  margin-bottom:.08rem;
 }
 .channel strong{
-  font-size:1.05rem;
-  font-weight:600;
+  font-size:.85rem;
+  font-weight:500;
+  color:rgba(255,255,255,.92);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:block;
 }
 
 /* Form */
@@ -822,7 +912,7 @@ footer{
   gap:.75rem;
   margin-bottom:1.25rem;
 }
-.footer-brand img{width:54px;height:54px;object-fit:contain}
+.footer-brand img{width:44px;height:44px;object-fit:contain}
 .footer-brand strong{
   display:block;
   font-family:'Fraunces',serif;
@@ -938,7 +1028,13 @@ footer{
   }
   .frota-grid{grid-template-columns:1fr}
   .frota-card:last-child{grid-column:span 1;max-width:100%}
-  .depo-grid{grid-template-columns:1fr}
+  .depo-card{width:280px}
+  .depo-card[data-pos="-1"]{transform:translate(-50%,-50%) translateX(-180px) translateZ(-180px) rotateY(28deg)}
+  .depo-card[data-pos="1"]{transform:translate(-50%,-50%) translateX(180px) translateZ(-180px) rotateY(-28deg)}
+  .depo-card[data-pos="-2"]{transform:translate(-50%,-50%) translateX(-300px) translateZ(-340px) rotateY(35deg);opacity:0}
+  .depo-card[data-pos="2"]{transform:translate(-50%,-50%) translateX(300px) translateZ(-340px) rotateY(-35deg);opacity:0}
+  .depo-nav.prev{left:.25rem}
+  .depo-nav.next{right:.25rem}
   .form-row{grid-template-columns:1fr}
   .form-card{padding:1.75rem}
   .footer-inner{grid-template-columns:1fr;gap:2rem}
@@ -958,10 +1054,21 @@ footer{
 <nav class="nav" id="nav">
   <div class="container nav-inner">
     <a href="#" class="brand">
-      <img src="assets/logo.png" alt="MV Transfer">
+      <span class="logo-mark">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E85D2C"/>
+              <stop offset="100%" stop-color="#C8471D"/>
+            </linearGradient>
+          </defs>
+          <circle cx="30" cy="30" r="28" fill="url(#lg1)"/>
+          <path d="M14 38 L18 22 L24 22 L30 32 L36 22 L42 22 L46 38 L41 38 L38 28 L32 38 L28 38 L22 28 L19 38 Z" fill="#FBF6EE"/>
+        </svg>
+      </span>
       <div class="brand-text">
         MV Transfer
-        <small>Lençóis Maranhenses</small>
+        <small>Seu Receptivo nos Lençóis</small>
       </div>
     </a>
     <div class="nav-links">
@@ -982,8 +1089,8 @@ footer{
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content">
-        <span class="eyebrow">Receptivo no Nordeste</span>
-        <h1>Sua viagem pelos<br>Lençóis Maranhenses<br><em>começa aqui.</em></h1>
+        <span class="eyebrow">MV Transfer · Lençóis Maranhenses</span>
+        <h1>Seu receptivo nos<br><em>Lençóis Maranhenses</em></h1>
         <p class="hero-lede">
           Transfers privativos com motoristas locais, frota moderna e roteiros sob medida.
           Conforto, segurança e pontualidade entre os destinos mais espetaculares do Nordeste brasileiro.
@@ -1241,8 +1348,8 @@ footer{
               Até 4 pessoas
             </div>
             <div class="frota-feat">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="6" width="18" height="12" rx="2"/></svg>
-              3 malas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Horários a combinar
             </div>
             <div class="frota-feat">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9.5 2A1.5 1.5 0 0 0 8 3.5v17A1.5 1.5 0 0 0 9.5 22h5a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 14.5 2h-5z"/></svg>
@@ -1271,8 +1378,8 @@ footer{
               Até 7 pessoas
             </div>
             <div class="frota-feat">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="6" width="18" height="12" rx="2"/></svg>
-              5 malas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Horários a combinar
             </div>
             <div class="frota-feat">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 19l-7-7 7-7"/></svg>
@@ -1303,8 +1410,8 @@ footer{
               Até 15 pessoas
             </div>
             <div class="frota-feat">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="6" width="18" height="12" rx="2"/></svg>
-              15 malas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Horários a combinar
             </div>
             <div class="frota-feat">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9.5 2A1.5 1.5 0 0 0 8 3.5v17A1.5 1.5 0 0 0 9.5 22h5a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 14.5 2h-5z"/></svg>
@@ -1322,86 +1429,95 @@ footer{
   <div class="container">
     <div class="section-header reveal">
       <span class="eyebrow">Quem viajou, conta</span>
-      <h2>Experiências reais de quem confiou na MV Transfer</h2>
+      <h2>Experiências reais</h2>
     </div>
 
-    <div class="depo-grid">
-      <div class="depo-card reveal">
-        <div class="depo-quote">"</div>
-        <div class="stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="depo-text">Desde a chegada em São Luís até a saída por Fortaleza, foi tudo impecável. O motorista nos esperou no aeroporto mesmo com o voo atrasado, e o veículo estava impecável. Recomendo de olhos fechados.</p>
-        <div class="depo-author">
-          <div class="author-avatar av-1">MR</div>
-          <div class="author-info">
-            <strong>Marina Ribeiro</strong>
-            <span>São Paulo · Outubro/2025</span>
+    <div class="depo-coverflow reveal">
+      <button class="depo-nav prev" aria-label="Anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="depo-nav next" aria-label="Próximo">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="depo-track" id="depoTrack">
+        <div class="depo-card">
+          <div class="depo-quote">"</div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="depo-text">Desde a chegada em São Luís até a saída por Fortaleza, foi tudo impecável. O motorista nos esperou no aeroporto mesmo com o voo atrasado.</p>
+          <div class="depo-author">
+            <div class="author-avatar av-1">MR</div>
+            <div class="author-info">
+              <strong>Marina Ribeiro</strong>
+              <span>São Paulo · Out/2025</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="depo-card reveal">
-        <div class="depo-quote">"</div>
-        <div class="stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="depo-text">Viajamos em grupo de 8 pessoas e a van foi perfeita. Pontualidade alemã, motorista atencioso que ainda nos deu várias dicas dos lugares. Trecho Barreirinhas-Jericoacoara foi tranquilo e seguro.</p>
-        <div class="depo-author">
-          <div class="author-avatar av-2">CA</div>
-          <div class="author-info">
-            <strong>Carlos Andrade</strong>
-            <span>Belo Horizonte · Setembro/2025</span>
+        <div class="depo-card">
+          <div class="depo-quote">"</div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="depo-text">Viajamos em grupo de 8 pessoas e a van foi perfeita. Pontualidade alemã, motorista atencioso. Trecho Barreirinhas-Jericoacoara foi tranquilo e seguro.</p>
+          <div class="depo-author">
+            <div class="author-avatar av-2">CA</div>
+            <div class="author-info">
+              <strong>Carlos Andrade</strong>
+              <span>Belo Horizonte · Set/2025</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="depo-card reveal">
-        <div class="depo-quote">"</div>
-        <div class="stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="depo-text">A travessia até Atins na Hilux foi a melhor parte da viagem. O Vitor conhece a região como ninguém — paramos em pontos que nem estavam no roteiro original e foram inesquecíveis. Voltarei!</p>
-        <div class="depo-author">
-          <div class="author-avatar av-3">JT</div>
-          <div class="author-info">
-            <strong>Juliana Teixeira</strong>
-            <span>Rio de Janeiro · Agosto/2025</span>
+        <div class="depo-card">
+          <div class="depo-quote">"</div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="depo-text">A travessia até Atins na Hilux foi a melhor parte da viagem. O Vitor conhece a região como ninguém. Voltarei com certeza!</p>
+          <div class="depo-author">
+            <div class="author-avatar av-3">JT</div>
+            <div class="author-info">
+              <strong>Juliana Teixeira</strong>
+              <span>Rio de Janeiro · Ago/2025</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="depo-card reveal">
-        <div class="depo-quote">"</div>
-        <div class="stars">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <p class="depo-text">Atendimento profissional do início ao fim. Fizemos o transfer Parnaíba-Jericoacoara passando pelo Delta e foi perfeitamente cronometrado. Preço justo, comunicação clara, zero dor de cabeça.</p>
-        <div class="depo-author">
-          <div class="author-avatar av-4">RS</div>
-          <div class="author-info">
-            <strong>Rodrigo Santos</strong>
-            <span>Brasília · Julho/2025</span>
+        <div class="depo-card">
+          <div class="depo-quote">"</div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="depo-text">Atendimento profissional do início ao fim. Fizemos Parnaíba-Jericoacoara pelo Delta. Preço justo, comunicação clara, zero dor de cabeça.</p>
+          <div class="depo-author">
+            <div class="author-avatar av-4">RS</div>
+            <div class="author-info">
+              <strong>Rodrigo Santos</strong>
+              <span>Brasília · Jul/2025</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="depo-controls" id="depoControls"></div>
   </div>
 </section>
 
@@ -1513,10 +1629,21 @@ footer{
     <div class="footer-inner">
       <div class="footer-col">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="MV Transfer">
+          <span class="logo-mark logo-mark-lg">
+            <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E85D2C"/>
+                  <stop offset="100%" stop-color="#C8471D"/>
+                </linearGradient>
+              </defs>
+              <circle cx="30" cy="30" r="28" fill="url(#lg2)"/>
+              <path d="M14 38 L18 22 L24 22 L30 32 L36 22 L42 22 L46 38 L41 38 L38 28 L32 38 L28 38 L22 28 L19 38 Z" fill="#FBF6EE"/>
+            </svg>
+          </span>
           <div>
             <strong>MV Transfer</strong>
-            <small>Lençóis Maranhenses</small>
+            <small>Seu Receptivo nos Lençóis</small>
           </div>
         </div>
         <p>Receptivo turístico especializado nos destinos mais espetaculares do Nordeste brasileiro. Conforto, segurança e atendimento de excelência.</p>
@@ -1536,11 +1663,15 @@ footer{
       <div class="footer-col">
         <h4>Destinos</h4>
         <ul>
-          <li><a href="#">São Luís</a></li>
-          <li><a href="#">Barreirinhas</a></li>
-          <li><a href="#">Jericoacoara</a></li>
-          <li><a href="#">Delta do Parnaíba</a></li>
-          <li><a href="#">Fortaleza</a></li>
+          <li><a href="#destinos">Lençóis Maranhenses</a></li>
+          <li><a href="#destinos">Jericoacoara</a></li>
+          <li><a href="#destinos">Delta do Parnaíba</a></li>
+          <li><a href="#destinos">Barra Grande</a></li>
+          <li><a href="#destinos">São Luís</a></li>
+          <li><a href="#destinos">Fortaleza</a></li>
+          <li><a href="#destinos">Tutóia</a></li>
+          <li><a href="#destinos">Santo Amaro</a></li>
+          <li><a href="#destinos">Camocim</a></li>
         </ul>
       </div>
 
@@ -1586,6 +1717,55 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Coverflow Carousel
+const depoCards = document.querySelectorAll('#depoTrack .depo-card');
+const depoControls = document.getElementById('depoControls');
+let depoActive = 0;
+const depoTotal = depoCards.length;
+
+function updateDepo(){
+  depoCards.forEach((card,i)=>{
+    let diff = i - depoActive;
+    if(diff > depoTotal/2) diff -= depoTotal;
+    if(diff < -depoTotal/2) diff += depoTotal;
+    if(Math.abs(diff) > 2) card.style.display = 'none';
+    else { card.style.display = 'block'; card.dataset.pos = diff; }
+  });
+  document.querySelectorAll('.depo-dot').forEach((d,i)=>{
+    d.classList.toggle('active', i===depoActive);
+  });
+}
+
+depoCards.forEach((_,i)=>{
+  const dot = document.createElement('button');
+  dot.className = 'depo-dot' + (i===0?' active':'');
+  dot.setAttribute('aria-label', 'Depoimento '+(i+1));
+  dot.addEventListener('click', ()=>{ depoActive = i; updateDepo(); });
+  depoControls.appendChild(dot);
+});
+
+depoCards.forEach((card,i)=>{
+  card.addEventListener('click', ()=>{ depoActive = i; updateDepo(); });
+});
+
+document.querySelector('.depo-nav.prev').addEventListener('click', ()=>{
+  depoActive = (depoActive - 1 + depoTotal) % depoTotal;
+  updateDepo();
+});
+document.querySelector('.depo-nav.next').addEventListener('click', ()=>{
+  depoActive = (depoActive + 1) % depoTotal;
+  updateDepo();
+});
+
+let depoAuto = setInterval(()=>{
+  depoActive = (depoActive + 1) % depoTotal;
+  updateDepo();
+}, 5500);
+
+document.querySelector('.depo-coverflow').addEventListener('mouseenter', ()=> clearInterval(depoAuto));
+
+updateDepo();
 
 // Form
 document.getElementById('form-orcamento').addEventListener('submit', (e) => {
