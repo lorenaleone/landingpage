@@ -326,21 +326,21 @@ section{padding:6rem 0;position:relative}
 
 .dest-grid{
   display:grid;
-  grid-template-columns:repeat(12, 1fr);
-  gap:1.25rem;
+  grid-template-columns:repeat(3, 1fr);
+  gap:1rem;
 }
 
 .dest-card{
   position:relative;
-  border-radius:18px;
+  border-radius:14px;
   overflow:hidden;
   background:var(--ink-900);
   cursor:pointer;
   transition:all .4s cubic-bezier(.2,.8,.2,1);
-  min-height:280px;
+  min-height:200px;
   display:flex;
   align-items:flex-end;
-  padding:1.75rem;
+  padding:1.25rem;
   color:white;
   isolation:isolate;
 }
@@ -387,19 +387,19 @@ section{padding:6rem 0;position:relative}
 }
 .dest-card h3{
   color:white;
-  font-size:1.6rem;
+  font-size:1.25rem;
   font-weight:600;
-  margin-bottom:.4rem;
+  margin-bottom:.3rem;
 }
 .dest-card p{
-  font-size:.92rem;
+  font-size:.82rem;
   opacity:.85;
-  line-height:1.5;
+  line-height:1.45;
 }
 .dest-arrow{
   position:absolute;
-  top:1.25rem;right:1.25rem;
-  width:38px;height:38px;
+  top:1rem;right:1rem;
+  width:32px;height:32px;
   border-radius:50%;
   background:rgba(255,255,255,.15);
   backdrop-filter:blur(10px);
@@ -414,11 +414,7 @@ section{padding:6rem 0;position:relative}
   transform:rotate(-45deg);
 }
 
-/* Layout bento */
-.dest-card.featured{grid-column:span 8;min-height:380px}
-.dest-card.featured h3{font-size:2.4rem}
-.dest-card.medium{grid-column:span 4}
-.dest-card.small{grid-column:span 4}
+/* todos os cards iguais no 3x3 */
 
 /* ============ SERVIÇOS ============ */
 .servicos{
@@ -918,8 +914,7 @@ footer{
 @media (max-width:992px){
   .hero-grid,.contato-inner{grid-template-columns:1fr;gap:3rem}
   .hero-visual{max-width:480px;margin:0 auto;width:100%}
-  .dest-card.featured{grid-column:span 12}
-  .dest-card.medium,.dest-card.small{grid-column:span 6}
+  .dest-grid{grid-template-columns:repeat(2,1fr)}
   .serv-grid{grid-template-columns:repeat(2,1fr)}
   .serv-item:nth-child(3n){border-right:1px solid rgba(255,255,255,.08)}
   .serv-item:nth-child(2n){border-right:none}
@@ -937,8 +932,8 @@ footer{
   .hero{padding:6rem 0 3rem;min-height:auto}
   .hero-meta{gap:1.5rem;flex-wrap:wrap}
   .meta-item .num{font-size:1.5rem}
-  .dest-card.medium,.dest-card.small,.dest-card.featured{grid-column:span 12;min-height:240px}
-  .dest-card.featured h3{font-size:1.7rem}
+  .dest-grid{grid-template-columns:1fr}
+  .dest-card{min-height:180px}
   .serv-grid{grid-template-columns:1fr;border:none;border-radius:0}
   .serv-item{
     border:1px solid rgba(255,255,255,.08)!important;
@@ -1053,7 +1048,7 @@ footer{
     </div>
 
     <div class="dest-grid">
-      <div class="dest-card lencois featured reveal">
+      <div class="dest-card lencois reveal">
         <span class="dest-tag">Maranhão · Destaque</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1064,7 +1059,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card jeri medium reveal">
+      <div class="dest-card jeri reveal">
         <span class="dest-tag">Ceará</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1075,7 +1070,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card delta small reveal">
+      <div class="dest-card delta reveal">
         <span class="dest-tag">Piauí</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1086,7 +1081,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card barra small reveal">
+      <div class="dest-card barra reveal">
         <span class="dest-tag">Piauí</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1097,7 +1092,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card sao-luis small reveal">
+      <div class="dest-card sao-luis reveal">
         <span class="dest-tag">Maranhão</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1108,7 +1103,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card fortaleza small reveal">
+      <div class="dest-card fortaleza reveal">
         <span class="dest-tag">Ceará</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
@@ -1141,7 +1136,7 @@ footer{
         </div>
       </div>
 
-      <div class="dest-card camocim featured reveal">
+      <div class="dest-card camocim reveal">
         <span class="dest-tag">Ceará · Litoral Oeste</span>
         <div class="dest-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
