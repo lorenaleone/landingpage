@@ -65,6 +65,23 @@
 
     input, select, textarea { outline: none; font-family: inherit; }
     input:focus, select:focus, textarea:focus { border-color: #1F6584 !important; }
+
+    /* ── CIRCUIT CHIPS ── */
+    .circuit-chip {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid rgba(17,23,28,.14); border-radius: 9999px;
+      padding: 6px 14px; font-size: 12.5px; line-height: 1;
+      cursor: pointer; transition: all .18s ease;
+      background: transparent; color: #283139; font-family: Inter, sans-serif;
+      white-space: nowrap;
+    }
+    .circuit-chip:hover { border-color: rgba(31,101,132,.45); color: #1F6584; }
+    .circuit-chip.selected {
+      background: #143D50; border-color: #143D50; color: #FBF7EE;
+    }
+    .circuit-chip.selected .chip-dot { background: rgba(111,163,182,.7); }
+    .chip-dot { width: 5px; height: 5px; border-radius: 9999px; background: rgba(17,23,28,.18); flex-shrink: 0; transition: background .18s; }
+    .chip-dur { font-size: 11px; opacity: .55; }
   </style>
 </head>
 <body>
@@ -137,11 +154,11 @@
 
   <div class="mx-auto max-w-6xl px-5 sm:px-8 w-full pt-32 pb-20 lg:pb-28">
     <p class="eyebrow text-sand-100/80">Santo Amaro do Maranhão · Lençóis Maranhenses</p>
-    <h1 class="h-display mt-5 text-5xl sm:text-6xl lg:text-[78px] text-sand-50">
+    <h1 class="h-display mt-5 text-4xl sm:text-5xl lg:text-[66px] text-sand-50">
       Os Lençóis que<br/>poucos conhecem.<br/>
       <em class="not-italic italic font-normal text-sand-100/80">A gente leva você até eles.</em>
     </h1>
-    <p class="mt-6 max-w-lg text-sand-100/80 text-base lg:text-lg leading-relaxed">
+    <p class="mt-5 max-w-lg text-sand-100/80 text-[15px] lg:text-base leading-relaxed">
       Seis circuitos exclusivos saindo direto de Santo Amaro. Lagoas escondidas, dunas que mudam de forma com o vento e um parque que vale a viagem.
     </p>
     <div class="mt-9 flex flex-wrap gap-3">
@@ -197,7 +214,7 @@
 <!-- ═══════════════════════════════════════════
      SOBRE
 ═══════════════════════════════════════════ -->
-<section id="sobre" class="py-24 lg:py-32">
+<section id="sobre" class="py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
     <div class="lg:col-span-5">
       <div class="relative overflow-hidden rounded-3xl" style="aspect-ratio:4/5">
@@ -210,7 +227,7 @@
     </div>
     <div class="lg:col-span-7">
       <p class="eyebrow">Quem somos</p>
-      <h2 class="h-display mt-4 text-4xl sm:text-5xl lg:text-6xl text-ink-900 max-w-xl">
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl lg:text-5xl text-ink-900 max-w-xl">
         Nascemos em Santo Amaro para mostrar o parque de dentro.
       </h2>
       <div class="mt-7 space-y-5 text-ink-700 leading-relaxed text-[15px] max-w-[64ch]">
@@ -226,12 +243,12 @@
 <!-- ═══════════════════════════════════════════
      POR QUE A BRISA AZUL
 ═══════════════════════════════════════════ -->
-<section class="py-24 lg:py-28 bg-lagoon-800 text-sand-50">
+<section class="py-20 lg:py-24 bg-lagoon-800 text-sand-50">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
       <div>
         <p class="eyebrow text-lagoon-300">Por que a Brisa Azul</p>
-        <h2 class="h-display mt-4 text-4xl sm:text-5xl text-sand-50 max-w-xl">
+        <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50 max-w-xl">
           Cinco motivos para escolher quem mora no parque.
         </h2>
       </div>
@@ -270,11 +287,11 @@
 <!-- ═══════════════════════════════════════════
      CIRCUITOS
 ═══════════════════════════════════════════ -->
-<section id="circuitos" class="py-24 lg:py-32 bg-sand-100/50">
+<section id="circuitos" class="py-20 lg:py-28 bg-sand-100/50">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div class="max-w-2xl">
       <p class="eyebrow">Circuitos</p>
-      <h2 class="h-display mt-4 text-4xl sm:text-5xl text-ink-900">
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-ink-900">
         Seis rotas. Um ponto de partida: Santo Amaro.
       </h2>
       <p class="mt-5 text-ink-700 leading-relaxed text-[15px]">Cada circuito acessa uma parte diferente do parque. Você pode combinar mais de um — a gente monta o roteiro junto.</p>
@@ -390,7 +407,7 @@
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
       <div>
         <p class="eyebrow text-lagoon-300">Galeria</p>
-        <h2 class="h-display mt-3 text-4xl sm:text-5xl text-sand-50 max-w-lg">Um pedaço do que te espera.</h2>
+        <h2 class="h-display mt-3 text-3xl sm:text-4xl text-sand-50 max-w-lg">Um pedaço do que te espera.</h2>
       </div>
       <div class="flex items-center gap-3">
         <button id="cf-prev" aria-label="Foto anterior" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-sand-50/20 text-sand-50 hover:bg-sand-50/10 disabled:opacity-30 transition">
@@ -414,11 +431,11 @@
 <!-- ═══════════════════════════════════════════
      FAQ
 ═══════════════════════════════════════════ -->
-<section id="faq" class="py-24 lg:py-32">
+<section id="faq" class="py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12">
     <div class="lg:col-span-4">
       <p class="eyebrow">Dúvidas frequentes</p>
-      <h2 class="h-display mt-4 text-4xl sm:text-5xl text-ink-900">Perguntas que a gente recebe toda semana.</h2>
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-ink-900">Perguntas que a gente recebe toda semana.</h2>
       <p class="mt-5 text-ink-700 leading-relaxed text-[15px]">Não achou o que procurava? Manda no WhatsApp — respondemos em até 1h.</p>
     </div>
     <ul id="faq-list" class="lg:col-span-8 divide-y divide-ink-900/10 border-y border-ink-900/10 self-start"></ul>
@@ -428,76 +445,117 @@
 <!-- ═══════════════════════════════════════════
      RESERVAR
 ═══════════════════════════════════════════ -->
-<section id="reservar" class="py-24 lg:py-32 bg-lagoon-700 text-sand-50">
-  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-12 gap-12 items-start">
-    <div class="lg:col-span-5">
+<section id="reservar" class="py-20 lg:py-28 bg-lagoon-800 text-sand-50">
+  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+    <!-- Info lateral -->
+    <div class="lg:col-span-4">
       <p class="eyebrow text-lagoon-300">Reserve seu circuito</p>
-      <h2 class="h-display mt-4 text-4xl sm:text-5xl text-sand-50">Resposta em até 1h no WhatsApp.</h2>
-      <p class="mt-5 text-sand-100/75 leading-relaxed text-[15px] max-w-sm">Preencha e seus dados chegam direto na conversa da Brisa Azul. A gente confirma disponibilidade e manda todos os detalhes.</p>
-      <dl class="mt-10 space-y-5 text-sm">
-        <div>
-          <dt class="text-[11px] uppercase tracking-widest2 text-sand-100/45">WhatsApp</dt>
-          <dd class="mt-1"><a href="https://wa.me/5598991234567" target="_blank" class="hover:underline text-sand-100/85">(98) 99123-4567</a></dd>
-        </div>
-        <div>
-          <dt class="text-[11px] uppercase tracking-widest2 text-sand-100/45">E-mail</dt>
-          <dd class="mt-1"><a href="mailto:contato@brisaazulviagens.com.br" class="hover:underline text-sand-100/85">contato@brisaazulviagens.com.br</a></dd>
-        </div>
-        <div>
-          <dt class="text-[11px] uppercase tracking-widest2 text-sand-100/45">Instagram</dt>
-          <dd class="mt-1"><a href="https://instagram.com/brisaazul.viagens" target="_blank" class="hover:underline text-sand-100/85">@brisaazul.viagens</a></dd>
-        </div>
-        <div>
-          <dt class="text-[11px] uppercase tracking-widest2 text-sand-100/45">Pagamento</dt>
-          <dd class="mt-1 text-sand-100/85">Pix · Cartão (até 2×) · Dinheiro</dd>
-        </div>
-      </dl>
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50 leading-tight">Resposta em até 1h no WhatsApp.</h2>
+      <p class="mt-4 text-sand-100/60 leading-relaxed text-sm max-w-xs">Preencha o formulário e seus dados chegam direto na conversa da Brisa Azul. A gente confirma disponibilidade e manda todos os detalhes.</p>
+
+      <div class="mt-9 space-y-4 text-sm">
+        <a href="https://wa.me/5598991234567" target="_blank" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
+          </span>
+          (98) 99123-4567
+        </a>
+        <a href="mailto:contato@brisaazulviagens.com.br" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          contato@brisaazulviagens.com.br
+        </a>
+        <a href="https://instagram.com/brisaazul.viagens" target="_blank" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </span>
+          @brisaazul.viagens
+        </a>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-sand-100/10 text-xs text-sand-100/40">
+        <p class="uppercase tracking-widest2 mb-2">Pagamento</p>
+        <p>Pix · Cartão (até 2×) · Dinheiro</p>
+      </div>
     </div>
 
-    <form id="booking-form" class="lg:col-span-7 rounded-3xl bg-sand-50 text-ink-900 p-7 sm:p-10">
-      <div class="grid sm:grid-cols-2 gap-6">
+    <!-- Formulário -->
+    <form id="booking-form" class="lg:col-span-8 rounded-2xl bg-sand-50 text-ink-900 p-6 sm:p-8">
+
+      <!-- Seleção de circuitos -->
+      <div class="mb-7">
+        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) de interesse <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
+        <div id="circuit-picker" class="flex flex-wrap gap-2">
+          <button type="button" class="circuit-chip" data-circuit="Emendadas">
+            <span class="chip-dot"></span>Emendadas <span class="chip-dur">~6h</span>
+          </button>
+          <button type="button" class="circuit-chip" data-circuit="Américas">
+            <span class="chip-dot"></span>Américas <span class="chip-dur">~7h</span>
+          </button>
+          <button type="button" class="circuit-chip" data-circuit="Andorinhas">
+            <span class="chip-dot"></span>Andorinhas <span class="chip-dur">~4h</span>
+          </button>
+          <button type="button" class="circuit-chip" data-circuit="Betânia">
+            <span class="chip-dot"></span>Betânia <span class="chip-dur">~5h</span>
+          </button>
+          <button type="button" class="circuit-chip" data-circuit="Ponta Verde">
+            <span class="chip-dot"></span>Ponta Verde <span class="chip-dur">~6h</span>
+          </button>
+          <button type="button" class="circuit-chip" data-circuit="Rancharia">
+            <span class="chip-dot"></span>Rancharia <span class="chip-dur">~8h</span>
+          </button>
+        </div>
+        <p id="circuit-error" class="mt-2 text-xs text-rust-400 hidden">Selecione ao menos um circuito.</p>
+      </div>
+
+      <div class="h-px bg-ink-900/8 mb-7"></div>
+
+      <!-- Campos -->
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
         <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">Nome completo</span>
-          <input name="nome" type="text" required class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900" />
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Nome completo</span>
+          <input name="nome" type="text" required autocomplete="name"
+            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
         </label>
         <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">WhatsApp (com DDD)</span>
-          <input name="telefone" type="tel" required class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900" />
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">WhatsApp (com DDD)</span>
+          <input name="telefone" type="tel" required autocomplete="tel"
+            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
         </label>
         <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">E-mail</span>
-          <input name="email" type="email" required class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900" />
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">E-mail</span>
+          <input name="email" type="email" required autocomplete="email"
+            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
         </label>
         <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">Data prevista</span>
-          <input name="data" type="date" required class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900" />
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data prevista</span>
+          <input name="data" type="date" required
+            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">Quantas pessoas</span>
-          <input name="pessoas" type="number" min="1" required class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900" />
-        </label>
-        <label class="block">
-          <span class="text-[11px] uppercase tracking-widest2 text-ink-400">Qual circuito?</span>
-          <select name="circuito" class="mt-2 w-full border-0 border-b border-ink-900/20 bg-transparent pb-2.5 pt-1 text-ink-900">
-            <option>Circuito Emendadas — Saída 8h · ~6h</option>
-            <option>Circuito Américas — Saída 7h30 · ~7h</option>
-            <option>Circuito Andorinhas — Saída 14h · ~4h</option>
-            <option>Circuito Betânia — Saída 8h · ~5h</option>
-            <option>Circuito Ponta Verde — Saída 8h · ~6h</option>
-            <option>Circuito Rancharia — Saída 8h · ~8h</option>
-          </select>
+        <label class="block sm:col-span-2">
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Quantas pessoas</span>
+          <input name="pessoas" type="number" min="1" max="8" required
+            class="mt-2 w-full sm:w-1/2 border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
       </div>
+
       <label class="mt-6 block">
-        <span class="text-[11px] uppercase tracking-widest2 text-ink-400">Observações</span>
-        <textarea name="obs" rows="3" placeholder="Restrição alimentar, crianças, datas flexíveis..." class="mt-2 w-full rounded-xl border border-ink-900/12 bg-sand-100/60 px-4 py-3 text-sm text-ink-800 resize-none placeholder:text-ink-400"></textarea>
+        <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Observações <span class="normal-case tracking-normal text-ink-400/60 text-[11px]">— opcional</span></span>
+        <textarea name="obs" rows="2" placeholder="Restrição alimentar, crianças, datas flexíveis…"
+          class="mt-2 w-full rounded-lg border border-ink-900/10 bg-sand-100/50 px-3.5 py-2.5 text-sm text-ink-800 resize-none placeholder:text-ink-400/50 focus:border-lagoon-500 transition-colors"></textarea>
       </label>
-      <button type="submit" class="btn btn-whats mt-8">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
-        Enviar para o WhatsApp
-      </button>
-      <p class="mt-3 text-xs text-ink-400">Você será redirecionado para o WhatsApp com a mensagem pronta.</p>
+
+      <div class="mt-7 flex items-center gap-5">
+        <button type="submit" class="btn btn-whats">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+        <p class="text-xs text-ink-400 leading-relaxed">Você será redirecionado para o<br/>WhatsApp com a mensagem pronta.</p>
+      </div>
     </form>
+
   </div>
 </section>
 
@@ -657,22 +715,44 @@ const faqs = [
   });
 })();
 
+// ── Circuit picker (multi-select)
+const selectedCircuits = new Set();
+document.querySelectorAll('.circuit-chip').forEach(btn => {
+  btn.addEventListener('click', function(){
+    const name = this.dataset.circuit;
+    if(selectedCircuits.has(name)){
+      selectedCircuits.delete(name);
+      this.classList.remove('selected');
+    } else {
+      selectedCircuits.add(name);
+      this.classList.add('selected');
+    }
+    document.getElementById('circuit-error').classList.toggle('hidden', selectedCircuits.size > 0);
+  });
+});
+
 // ── Booking form → WhatsApp
 document.getElementById('booking-form').addEventListener('submit', function(e){
   e.preventDefault();
+  if(selectedCircuits.size === 0){
+    document.getElementById('circuit-error').classList.remove('hidden');
+    document.getElementById('circuit-picker').scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
   const fd = new FormData(this);
   const get = k => (fd.get(k)||'').toString().trim();
+  const circuitosList = [...selectedCircuits].map(c => `Circuito ${c}`).join(', ');
   const msg = [
-    'Olá Brisa Azul! Quero reservar um circuito.',
+    'Olá, Brisa Azul! Quero reservar um circuito.',
     '',
-    `*Circuito:* ${get('circuito')}`,
+    `*Circuito(s):* ${circuitosList}`,
     `*Nome:* ${get('nome')}`,
     `*WhatsApp:* ${get('telefone')}`,
     `*E-mail:* ${get('email')}`,
-    `*Data:* ${get('data')}`,
+    `*Data prevista:* ${get('data')}`,
     `*Pessoas:* ${get('pessoas')}`,
-    get('obs') ? `\n*Obs:* ${get('obs')}` : ''
-  ].join('\n');
+    get('obs') ? `*Obs:* ${get('obs')}` : null,
+  ].filter(l => l !== null).join('\n');
   window.open('https://wa.me/5598991234567?text=' + encodeURIComponent(msg), '_blank');
 });
 
