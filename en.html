@@ -1,15 +1,14 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brisa Azul Viagens · Circuitos nos Lençóis Maranhenses</title>
-  <meta name="description" content="Seis circuitos exclusivos nos Lençóis Maranhenses saindo de Santo Amaro do Maranhão. Lagoas escondidas, grupos pequenos e guias nativos credenciados." />
-  <meta property="og:title" content="Brisa Azul Viagens · Circuitos nos Lençóis Maranhenses" />
-  <meta property="og:description" content="Seis circuitos exclusivos saindo de Santo Amaro. Lagoas escondidas, grupos pequenos e guias nativos." />
+  <title>Brisa Azul Viagens · Tours in Lençóis Maranhenses</title>
+  <meta name="description" content="Six exclusive circuits in Lençóis Maranhenses departing from Santo Amaro do Maranhão. Hidden lagoons, small groups and credentialed native guides." />
+  <meta property="og:title" content="Brisa Azul Viagens · Tours in Lençóis Maranhenses" />
+  <meta property="og:description" content="Six exclusive circuits departing from Santo Amaro. Hidden lagoons, small groups and native guides." />
   <meta property="og:image" content="images/hero.jpg" />
   <meta property="og:type" content="website" />
-  <!-- Preload imagens críticas — hero e about são acima da dobra -->
   <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high" />
   <link rel="preload" as="image" href="images/about.jpg" />
   <link rel="preload" as="image" href="images/galeria/01.jpg" />
@@ -122,22 +121,22 @@
 
     <!-- Nav desktop -->
     <nav class="hidden lg:flex items-center gap-7">
-      <a href="#sobre"     class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Sobre</a>
-      <a href="#circuitos" class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Circuitos</a>
-      <a href="#galeria"   class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Galeria</a>
-      <a href="#faq"       class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Dúvidas</a>
-      <a href="#reservar"  class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Reservar</a>
+      <a href="#sobre"     class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">About</a>
+      <a href="#circuitos" class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Tours</a>
+      <a href="#galeria"   class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Gallery</a>
+      <a href="#faq"       class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">FAQ</a>
+      <a href="#reservar"  class="nav-link text-sm font-semibold text-sand-50/80 hover:text-sand-50 transition-colors">Book</a>
     </nav>
 
     <!-- Lang switcher -->
     <div class="hidden lg:flex items-center gap-1.5 text-[11px] font-semibold tracking-wide">
-      <span id="lang-active" class="text-sand-50">PT</span>
+      <a id="lang-link" href="index.html" class="text-sand-50/50 hover:text-sand-50 transition-colors">PT</a>
       <span id="lang-sep" class="text-sand-50/30">|</span>
-      <a id="lang-link" href="en.html" class="text-sand-50/50 hover:text-sand-50 transition-colors">EN</a>
+      <span id="lang-active" class="text-sand-50">EN</span>
     </div>
 
     <a href="#reservar" class="hidden lg:inline-flex btn btn-ghost-light" id="header-cta">
-      Reservar
+      Book now
     </a>
 
     <!-- Burger -->
@@ -151,17 +150,17 @@
   <!-- Mobile drawer -->
   <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 transition-all duration-300">
     <div class="mx-auto max-w-6xl px-5 py-6 flex flex-col gap-4 bg-sand-50 border-t border-ink-900/10">
-      <a href="#sobre"     onclick="closeMenu()" class="text-base text-ink-800">Sobre</a>
-      <a href="#circuitos" onclick="closeMenu()" class="text-base text-ink-800">Circuitos</a>
-      <a href="#galeria"   onclick="closeMenu()" class="text-base text-ink-800">Galeria</a>
-      <a href="#faq"       onclick="closeMenu()" class="text-base text-ink-800">Dúvidas</a>
-      <a href="#reservar"  onclick="closeMenu()" class="text-base text-ink-800">Reservar</a>
+      <a href="#sobre"     onclick="closeMenu()" class="text-base text-ink-800">About</a>
+      <a href="#circuitos" onclick="closeMenu()" class="text-base text-ink-800">Tours</a>
+      <a href="#galeria"   onclick="closeMenu()" class="text-base text-ink-800">Gallery</a>
+      <a href="#faq"       onclick="closeMenu()" class="text-base text-ink-800">FAQ</a>
+      <a href="#reservar"  onclick="closeMenu()" class="text-base text-ink-800">Book</a>
       <div class="flex items-center gap-2 text-sm border-t border-ink-900/10 pt-4">
-        <span class="font-semibold text-ink-900">PT</span>
+        <a href="index.html" class="text-ink-500 hover:text-ink-900 transition-colors">PT</a>
         <span class="text-ink-400">|</span>
-        <a href="en.html" class="text-ink-500 hover:text-ink-900 transition-colors">EN</a>
+        <span class="font-semibold text-ink-900">EN</span>
       </div>
-      <a href="https://wa.me/5598999111749" target="_blank" class="btn btn-primary mt-2 text-center">Reservar no WhatsApp</a>
+      <a href="https://wa.me/5598999111749" target="_blank" class="btn btn-primary mt-2 text-center">Book on WhatsApp</a>
     </div>
   </div>
 </header>
@@ -178,11 +177,11 @@
   <div class="mx-auto max-w-6xl px-5 sm:px-8 w-full pt-32 pb-20 lg:pb-28">
     <p class="eyebrow text-sand-100/80">Santo Amaro do Maranhão · Lençóis Maranhenses</p>
     <h1 class="h-display mt-5 text-4xl sm:text-5xl lg:text-[66px] text-sand-50">
-      Os Lençóis que<br/>poucos conhecem.<br/>
-      <em class="not-italic italic font-normal text-sand-100/80">A gente leva você até eles.</em>
+      The Lençóis few<br/>people know.<br/>
+      <em class="not-italic italic font-normal text-sand-100/80">We take you there.</em>
     </h1>
     <p class="mt-5 max-w-lg text-sand-100/80 text-[15px] lg:text-base leading-relaxed">
-      Seis circuitos exclusivos saindo direto de Santo Amaro. Lagoas escondidas, dunas que mudam de forma com o vento e um parque que vale a viagem.
+      Six exclusive circuits departing from Santo Amaro. Hidden lagoons, dunes that shift with the wind, and a park worth the journey.
     </p>
     <div class="mt-9 flex flex-wrap gap-3">
       </a>
@@ -198,14 +197,14 @@
 <div class="overflow-hidden border-y border-ink-900/10 bg-sand-100/60 py-4" aria-hidden="true">
   <div class="marquee-track flex w-max gap-10 whitespace-nowrap">
     <template id="marquee-tpl">
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Circuitos exclusivos<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Saindo de Santo Amaro<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Lagoas preservadas<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Guias credenciados<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Grupos pequenos<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Transporte 4×4<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Pôr do sol nas dunas<span class="text-rust-500">✦</span></span>
-      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Cultura maranhense<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Exclusive tours<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">From Santo Amaro<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Pristine lagoons<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Certified guides<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Small groups<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">4×4 transport<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Sunset on the dunes<span class="text-rust-500">✦</span></span>
+      <span class="flex items-center gap-10 text-xs uppercase tracking-widest2 text-ink-700">Maranhão culture<span class="text-rust-500">✦</span></span>
     </template>
   </div>
 </div>
@@ -220,19 +219,19 @@
         <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('images/about.jpg')"></div>
         <div class="absolute inset-x-0 bottom-0 p-6" style="background:linear-gradient(to top,rgba(17,23,28,.85),transparent)">
           <p class="text-sand-50 font-display text-xl">Marina Ribeiro</p>
-          <p class="text-sand-100/65 text-sm">Fundadora · Brisa Azul Viagens · desde 2016</p>
+          <p class="text-sand-100/65 text-sm">Founder · Brisa Azul Viagens · since 2016</p>
         </div>
       </div>
     </div>
     <div class="lg:col-span-7">
-      <p class="eyebrow">Quem somos</p>
+      <p class="eyebrow">About us</p>
       <h2 class="h-display mt-4 text-3xl sm:text-4xl lg:text-5xl text-ink-900">
-        Nascemos em Santo Amaro para mostrar o parque de dentro.
+        Born in Santo Amaro to show the park from within.
       </h2>
       <div class="mt-7 space-y-5 text-ink-700 leading-relaxed text-[15px] max-w-[64ch]">
-        <p>A Brisa Azul Viagens foi fundada em 2016 por Marina Ribeiro, filha de pescador do Rio Preguiças, com uma ideia simples: os melhores pontos dos Lençóis Maranhenses não estão nos roteiros comuns.</p>
-        <p>Cada circuito da Brisa Azul parte do centro de Santo Amaro e acessa lagoas que a maioria dos turistas nunca vê — trilhas sem asfalto, lagoas sem selfie stick, dunas onde o único barulho é o vento.</p>
-        <p>Hoje são seis circuitos, uma equipe de guias nativos treinados e mais de 1.800 viajantes que voltaram pra casa com as pernas cansadas e a memória cheia.</p>
+        <p>Brisa Azul Viagens was founded in 2016 by Marina Ribeiro, daughter of a fisherman from Rio Preguiças, with a simple idea: the best spots in Lençóis Maranhenses aren't on the common routes.</p>
+        <p>Each Brisa Azul circuit departs from the center of Santo Amaro and reaches lagoons most tourists never see — unpaved trails, lagoons without selfie sticks, dunes where the only sound is the wind.</p>
+        <p>Today there are six circuits, a team of trained native guides, and over 1,800 travelers who returned home with tired legs and full memories.</p>
     </div>
   </div>
 </section>
@@ -243,132 +242,129 @@
 <section id="circuitos" class="py-20 lg:py-28 bg-sand-100/50">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div>
-      <p class="eyebrow">Circuitos</p>
+      <p class="eyebrow">Tours</p>
       <h2 class="h-display mt-4 text-3xl sm:text-4xl text-ink-900">
-        Seis rotas. Um ponto de partida: Santo Amaro.
+        Six routes. One starting point: Santo Amaro.
       </h2>
-      <p class="mt-5 text-ink-700 leading-relaxed text-[15px]">Cada circuito acessa uma parte diferente do parque. Você pode combinar mais de um — a gente monta o roteiro junto.</p>
+      <p class="mt-5 text-ink-700 leading-relaxed text-[15px]">Each circuit reaches a different part of the park. You can combine more than one — we'll plan the itinerary together.</p>
     </div>
 
     <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- helper SVG check reutilizado via CSS -->
       <article class="relative flex flex-col rounded-2xl border border-lagoon-400/50 ring-1 ring-lagoon-400/25 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
-        <!-- imagem -->
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/01.jpg" alt="Circuito Emendadas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/01.jpg" alt="Emendadas Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute top-3 left-3 inline-flex rounded-full bg-lagoon-600 px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Mais procurado</span>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
+          <span class="absolute top-3 left-3 inline-flex rounded-full bg-lagoon-600 px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Most popular</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 8am</span>
         </div>
-        <!-- conteúdo -->
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Emendadas</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais completo. As Lagoas Emendadas formam um espelho d'água que conecta duas lagoas — a vista de cima é a foto que todo mundo quer.</p>
+          <h3 class="font-display text-xl text-ink-900">Emendadas Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">The most complete. The Emendadas Lagoons form a water mirror connecting two lagoons — the aerial view is the photo everyone wants.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Parada em 3 lagoas (Emendadas, Preta e Manga)</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Acesso exclusivo por trilha 4×4</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Pôr do sol panorâmico nas dunas</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Stop at 3 lagoons (Emendadas, Preta and Manga)</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Exclusive access via 4×4 trail</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Panoramic sunset on the dunes</li>
           </ul>
-          <button type="button" id="card-btn-Emendadas" onclick="toggleCircuito('Emendadas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Emendadas" onclick="toggleCircuito('Emendadas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/02.jpg" alt="Circuito Américas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/02.jpg" alt="Américas Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 7h30</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 7:30am</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Américas</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais remoto. Lagoas azul-turquesa na região menos visitada do parque, com água cristalina e quase nenhum outro turista.</p>
+          <h3 class="font-display text-xl text-ink-900">Américas Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">The most remote. Turquoise-blue lagoons in the least visited area of the park, with crystal-clear water and almost no other tourists.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Lagoa mais cristalina de Santo Amaro</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço regional incluído</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas por saída</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Clearest lagoon in Santo Amaro</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Regional lunch included</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Maximum 6 people per departure</li>
           </ul>
-          <button type="button" id="card-btn-Américas" onclick="toggleCircuito('Américas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Américas" onclick="toggleCircuito('Américas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/03.jpg" alt="Circuito Andorinhas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/03.jpg" alt="Andorinhas Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 14h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 2pm</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Andorinhas</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O circuito da tarde. Leva o nome dos bandos de andorinhas que cruzam o céu ao entardecer, quando a luz fica laranja e a duna vira palco.</p>
+          <h3 class="font-display text-xl text-ink-900">Andorinhas Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">The afternoon circuit. Named after the flocks of swallows that cross the sky at dusk, when the light turns orange and the dune becomes a stage.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Horário ideal para o pôr do sol</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Trilha leve, acessível para todas as idades</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Perfeito para combinar com outro circuito</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Ideal timing for the sunset</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Easy trail, accessible for all ages</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Perfect to combine with another circuit</li>
           </ul>
-          <button type="button" id="card-btn-Andorinhas" onclick="toggleCircuito('Andorinhas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Andorinhas" onclick="toggleCircuito('Andorinhas')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/04.jpg" alt="Circuito Betânia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/04.jpg" alt="Betânia Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 8am</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Betânia</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">Natureza e cultura: o percurso passa pela comunidade de Betânia, com parada na lagoa e conversa com os moradores do oásis.</p>
+          <h3 class="font-display text-xl text-ink-900">Betânia Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">Nature and culture: the route passes through the Betânia community, with a stop at the lagoon and a conversation with the oasis residents.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Visita à comunidade quilombola de Betânia</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Café da manhã da roça incluído</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Ideal para grupos com crianças</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Visit to the Betânia quilombola community</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Farm-style breakfast included</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Great for groups with children</li>
           </ul>
-          <button type="button" id="card-btn-Betânia" onclick="toggleCircuito('Betânia')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Betânia" onclick="toggleCircuito('Betânia')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/05.jpg" alt="Circuito Ponta Verde" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/05.jpg" alt="Ponta Verde Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 8am</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Ponta Verde</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O circuito das surpresas. A Ponta Verde muda de cara entre junho e setembro — nas cheias, parece outro planeta.</p>
+          <h3 class="font-display text-xl text-ink-900">Ponta Verde Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">The circuit of surprises. Ponta Verde changes its appearance between June and September — during high water, it looks like another planet.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Vista dupla: lagoa de um lado, duna do outro</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Travessia de areia movediça em 4×4</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Um dos pontos mais fotografados de Santo Amaro</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Double view: lagoon on one side, dune on the other</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>4×4 quicksand crossing</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>One of the most photographed spots in Santo Amaro</li>
           </ul>
-          <button type="button" id="card-btn-Ponta-Verde" onclick="toggleCircuito('Ponta Verde')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Ponta-Verde" onclick="toggleCircuito('Ponta Verde')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/06.jpg" alt="Circuito Rancharia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/06.jpg" alt="Rancharia Circuit" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Departs 8am</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
-          <h3 class="font-display text-xl text-ink-900">Circuito Rancharia</h3>
-          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais longo e o mais fundo no parque. Para quem quer realmente sair do mapa — nenhum outro operador de Santo Amaro cobre este trecho.</p>
+          <h3 class="font-display text-xl text-ink-900">Rancharia Circuit</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">The longest and deepest into the park. For those who truly want to go off the map — no other operator in Santo Amaro covers this stretch.</p>
           <ul class="mt-4 space-y-2">
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>4 lagoas em sequência</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço no oásis com família local</li>
-            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas, reserva com 48h</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>4 lagoons in sequence</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Lunch at the oasis with a local family</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Maximum 6 people, booking 48h in advance</li>
           </ul>
-          <button type="button" id="card-btn-Rancharia" onclick="toggleCircuito('Rancharia')" class="btn btn-select mt-6 w-full"><span class="btn-label">Selecionar</span></button>
+          <button type="button" id="card-btn-Rancharia" onclick="toggleCircuito('Rancharia')" class="btn btn-select mt-6 w-full"><span class="btn-label">Select</span></button>
         </div>
       </article>
 
     </div>
     <p class="mt-8 text-center text-sm text-ink-500">
-      Quer combinar dois circuitos?
-      <a href="https://wa.me/5598999111749?text=Quero+combinar+mais+de+um+circuito.+Pode+me+ajudar+a+montar+o+roteiro%3F" target="_blank" class="text-lagoon-600 underline underline-offset-2 hover:text-lagoon-800">Fale no WhatsApp</a>
-      e montamos juntos.
+      Want to combine two circuits?
+      <a href="https://wa.me/5598999111749?text=Hi%2C+I'd+like+to+combine+more+than+one+circuit.+Can+you+help+me+plan+the+itinerary%3F" target="_blank" class="text-lagoon-600 underline underline-offset-2 hover:text-lagoon-800">Chat on WhatsApp</a>
+      and we'll plan it together.
     </p>
   </div>
 </section>
@@ -379,21 +375,21 @@
 <section id="galeria" class="py-24 lg:py-28 bg-ink-900 overflow-hidden">
   <div class="mx-auto max-w-6xl px-5 sm:px-8 mb-12">
     <div>
-      <p class="eyebrow text-lagoon-300">Galeria</p>
-      <h2 class="h-display mt-3 text-3xl sm:text-4xl text-sand-50">Um pedaço do que te espera.</h2>
+      <p class="eyebrow text-lagoon-300">Gallery</p>
+      <h2 class="h-display mt-3 text-3xl sm:text-4xl text-sand-50">A glimpse of what awaits you.</h2>
     </div>
   </div>
 
-  <!-- carrossel + setas sobrepostas nas extremidades -->
+  <!-- carousel + overlaid arrows -->
   <div class="relative">
     <div id="cf-wrap" class="cf-wrap flex items-center justify-center select-none cursor-grab" style="height:420px">
-      <!-- cards injetados por JS -->
+      <!-- cards injected by JS -->
     </div>
 
-    <button id="cf-prev" aria-label="Foto anterior" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink-900/60 border border-sand-50/20 text-sand-50 hover:bg-sand-50/15 disabled:opacity-20 transition backdrop-blur-sm">
+    <button id="cf-prev" aria-label="Previous photo" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink-900/60 border border-sand-50/20 text-sand-50 hover:bg-sand-50/15 disabled:opacity-20 transition backdrop-blur-sm">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
     </button>
-    <button id="cf-next" aria-label="Próxima foto" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink-900/60 border border-sand-50/20 text-sand-50 hover:bg-sand-50/15 disabled:opacity-20 transition backdrop-blur-sm">
+    <button id="cf-next" aria-label="Next photo" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full bg-ink-900/60 border border-sand-50/20 text-sand-50 hover:bg-sand-50/15 disabled:opacity-20 transition backdrop-blur-sm">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </button>
 
@@ -409,9 +405,9 @@
 <section id="faq" class="py-20 lg:py-28">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
     <div class="mb-12">
-      <p class="eyebrow">Dúvidas frequentes</p>
-      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-ink-900">Perguntas que a gente recebe toda semana.</h2>
-      <p class="mt-4 text-ink-700 leading-relaxed text-[15px]">Não achou o que procurava? Manda no WhatsApp — respondemos em até 1h.</p>
+      <p class="eyebrow">Frequently asked</p>
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-ink-900">Questions we receive every week.</h2>
+      <p class="mt-4 text-ink-700 leading-relaxed text-[15px]">Didn't find what you were looking for? Message us on WhatsApp — we respond within 1 hour.</p>
     </div>
     <ul id="faq-list" class="divide-y divide-ink-900/10 border-y border-ink-900/10"></ul>
   </div>
@@ -423,19 +419,16 @@
 <section id="reservar" class="py-20 lg:py-28 bg-lagoon-800 text-sand-50">
   <div class="mx-auto max-w-6xl px-5 sm:px-8">
 
-    <!-- Título acima do form -->
     <div class="mb-8">
-      <p class="eyebrow text-lagoon-300">Reserve seu circuito</p>
-      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50">Responderemos você o mais breve possível.</h2>
-      <p class="mt-4 text-sand-100/60 leading-relaxed text-sm">Preencha o formulário e seus dados chegam direto na conversa da Brisa Azul. A gente confirma disponibilidade e manda todos os detalhes.</p>
+      <p class="eyebrow text-lagoon-300">Book your circuit</p>
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50">We'll get back to you as soon as possible.</h2>
+      <p class="mt-4 text-sand-100/60 leading-relaxed text-sm">Fill out the form and your details go straight to Brisa Azul's conversation. We confirm availability and send all the details.</p>
     </div>
 
-    <!-- Formulário -->
     <form id="booking-form" class="rounded-2xl bg-sand-50 text-ink-900 p-7 sm:p-10">
 
-      <!-- Circuitos -->
       <div class="mb-6" id="circuit-block">
-        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
+        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuit(s) <span class="text-rust-400 normal-case tracking-normal text-[11px]">— select one or more</span></p>
         <div id="circuit-picker" class="flex flex-wrap gap-2">
           <button type="button" class="circuit-chip" data-circuit="Emendadas"><span class="chip-dot"></span>Emendadas</button>
           <button type="button" class="circuit-chip" data-circuit="Américas"><span class="chip-dot"></span>Américas</button>
@@ -444,20 +437,19 @@
           <button type="button" class="circuit-chip" data-circuit="Ponta Verde"><span class="chip-dot"></span>Ponta Verde</button>
           <button type="button" class="circuit-chip" data-circuit="Rancharia"><span class="chip-dot"></span>Rancharia</button>
         </div>
-        <p id="circuit-error" class="mt-2 text-xs text-rust-400 hidden">Selecione ao menos um circuito.</p>
+        <p id="circuit-error" class="mt-2 text-xs text-rust-400 hidden">Please select at least one circuit.</p>
       </div>
 
       <div class="h-px bg-ink-900/8 mb-6"></div>
 
-      <!-- Campos em uma linha só — 12 colunas -->
       <div class="grid grid-cols-12 gap-x-6 gap-y-5">
         <label class="block col-span-12 sm:col-span-4">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Nome completo</span>
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Full name</span>
           <input name="nome" type="text" required autocomplete="name"
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
         <label class="block col-span-6 sm:col-span-3" id="field-data">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data do passeio</span>
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Tour date</span>
           <input name="data" type="date" required
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
@@ -467,24 +459,24 @@
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
         <label class="block col-span-6 sm:col-span-2" id="field-pessoas">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Acompanhantes</span>
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Companions</span>
           <input name="pessoas" type="number" min="0" max="20" placeholder="0" required
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
       </div>
 
       <label class="mt-6 block">
-        <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Observações <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— opcional</span></span>
-        <textarea name="obs" rows="2" placeholder="Restrição alimentar, crianças, datas flexíveis…"
+        <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Notes <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— optional</span></span>
+        <textarea name="obs" rows="2" placeholder="Dietary restrictions, children, flexible dates…"
           class="mt-2 w-full rounded-lg border border-ink-900/10 bg-sand-100/50 px-3.5 py-2.5 text-sm text-ink-800 resize-none placeholder:text-ink-400/45 focus:border-lagoon-500 transition-colors"></textarea>
       </label>
 
       <div class="mt-7 flex items-center gap-5">
         <button type="submit" class="btn btn-whats">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
-          Enviar pelo WhatsApp
+          Send via WhatsApp
         </button>
-        <p class="text-xs text-ink-400 leading-relaxed">Você será redirecionado<br/>para o WhatsApp.</p>
+        <p class="text-xs text-ink-400 leading-relaxed">You will be redirected<br/>to WhatsApp.</p>
       </div>
     </form>
 
@@ -511,18 +503,18 @@
           <span class="block text-[9px] uppercase tracking-widest2 text-sand-100/50 mt-0.5">Viagens</span>
         </span>
       </a>
-      <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-100/50">Circuitos exclusivos nos Lençóis Maranhenses saindo de Santo Amaro do Maranhão.</p>
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-sand-100/50">Exclusive circuits in Lençóis Maranhenses departing from Santo Amaro do Maranhão.</p>
     </div>
     <nav class="md:col-span-3 text-sm space-y-2">
-      <p class="text-[11px] uppercase tracking-widest2 text-sand-100/40 mb-3">Navegação</p>
-      <a href="#sobre"     class="block hover:text-sand-50 transition-colors">Sobre</a>
-      <a href="#circuitos" class="block hover:text-sand-50 transition-colors">Circuitos</a>
-      <a href="#galeria"   class="block hover:text-sand-50 transition-colors">Galeria</a>
-      <a href="#faq"       class="block hover:text-sand-50 transition-colors">Dúvidas</a>
-      <a href="#reservar"  class="block hover:text-sand-50 transition-colors">Reservar</a>
+      <p class="text-[11px] uppercase tracking-widest2 text-sand-100/40 mb-3">Navigation</p>
+      <a href="#sobre"     class="block hover:text-sand-50 transition-colors">About</a>
+      <a href="#circuitos" class="block hover:text-sand-50 transition-colors">Tours</a>
+      <a href="#galeria"   class="block hover:text-sand-50 transition-colors">Gallery</a>
+      <a href="#faq"       class="block hover:text-sand-50 transition-colors">FAQ</a>
+      <a href="#reservar"  class="block hover:text-sand-50 transition-colors">Book</a>
     </nav>
     <div class="md:col-span-4 text-sm space-y-2.5">
-      <p class="text-[11px] uppercase tracking-widest2 text-sand-100/40 mb-3">Contato</p>
+      <p class="text-[11px] uppercase tracking-widest2 text-sand-100/40 mb-3">Contact</p>
       <p><a href="https://wa.me/5598999111749" target="_blank" class="hover:text-sand-50 transition-colors">(98) 99123-4567</a></p>
       <p><a href="mailto:contato@brisaazulviagens.com.br" class="hover:text-sand-50 transition-colors">contato@brisaazulviagens.com.br</a></p>
       <p><a href="https://instagram.com/brisaazul.viagens" target="_blank" class="hover:text-sand-50 transition-colors">@brisaazul.viagens</a></p>
@@ -531,8 +523,8 @@
   </div>
   <div class="border-t border-sand-100/10">
     <div class="mx-auto max-w-6xl px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-sand-100/40">
-      <p>© <span id="year"></span> Brisa Azul Viagens. Todos os direitos reservados.</p>
-      <p>Feito com ♥ nos Lençóis Maranhenses.</p>
+      <p>© <span id="year"></span> Brisa Azul Viagens. All rights reserved.</p>
+      <p>Made with ♥ in Lençóis Maranhenses.</p>
     </div>
   </div>
 </footer>
@@ -540,9 +532,9 @@
 <!-- Selection bar -->
 <div id="selection-bar" class="hidden-bar fixed bottom-20 left-1/2 z-40 flex items-center gap-3 rounded-full shadow-xl px-2 py-2 pr-5" style="transform:translateX(-50%) translateY(16px);background:#0F2E3D;min-width:260px">
   <span id="sel-count" class="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-ink-900" style="background:#E7D8B6">0</span>
-  <span id="sel-label" class="text-sm text-sand-100/80 flex-1">circuito selecionado</span>
+  <span id="sel-label" class="text-sm text-sand-100/80 flex-1">circuit added to the form</span>
   <a href="#reservar" class="text-xs font-semibold text-sand-50 whitespace-nowrap flex items-center gap-1">
-    Preencher reserva
+    Fill in booking
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </a>
 </div>
@@ -556,14 +548,13 @@
      SCRIPTS
 ═══════════════════════════════════════════ -->
 <script>
-// ── Ano no footer
+// ── Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ── Marquee: duplica os itens via template
+// ── Marquee: duplicate items via template
 (function(){
   const tpl = document.getElementById('marquee-tpl');
   const track = document.querySelector('.marquee-track');
-  const clone = tpl.content.cloneNode(true);
   track.appendChild(tpl.content.cloneNode(true));
   track.appendChild(tpl.content.cloneNode(true));
 })();
@@ -582,11 +573,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
     header.style.borderBottom = scrolled ? '1px solid rgba(17,23,28,0.1)' : 'none';
     logoName.style.color = scrolled ? '#11171C' : '#FBF7EE';
     logoSub.style.color  = scrolled ? 'rgba(74,85,96,0.7)' : 'rgba(251,247,238,0.55)';
-    // update svg strokes
     const svgs = header.querySelectorAll('header svg path, header svg circle');
     svgs.forEach(el => {
       const stroke = el.getAttribute('stroke');
-      const fill   = el.getAttribute('fill');
       if(stroke && stroke !== 'none') el.setAttribute('stroke', scrolled ? (stroke.includes('rgba') ? stroke.replace('251,247,238','17,23,28') : '#11171C') : stroke);
     });
     navLinks.forEach(a => {
@@ -629,13 +618,13 @@ function closeMenu(){ document.getElementById('burger').click(); }
 
 // ── FAQ
 const faqs = [
-  { q: 'Os circuitos saem de onde exatamente?', a: 'Todos os circuitos partem do centro de Santo Amaro do Maranhão. Buscamos em pousadas e pontos combinados dentro da cidade às 7h30 ou 8h, conforme o circuito escolhido.' },
-  { q: 'Qual a melhor época para visitar?', a: 'De julho a setembro as lagoas estão no auge — cheias, azuis e com o visual mais bonito. De outubro a dezembro o nível baixa mas o passeio continua ótimo e bem menos cheio. Janeiro a junho é época de chuva forte.' },
-  { q: 'Os circuitos são adequados para crianças?', a: 'O Circuito Betânia e o Circuito Andorinhas são os mais indicados para famílias com crianças — trilha mais curta, ritmo tranquilo. Para os demais, recomendamos a partir de 10 anos.' },
-  { q: 'Preciso ter preparo físico?', a: 'Para a maioria dos circuitos, não. O percurso em 4×4 cobre boa parte. Há trechos curtos a pé na areia. O Circuito Rancharia é o mais exigente — caminhada de até 4 km em areia.' },
-  { q: 'Como funciona a reserva?', a: 'Só pelo WhatsApp. Escolhe o circuito, confirma a data e o número de pessoas. Pedimos sinal de 30% no Pix para garantir a vaga. O restante paga no dia.' },
-  { q: 'Posso combinar mais de um circuito?', a: 'Sim, e é muito comum. A gente monta um roteiro combinado e dá desconto progressivo a partir do segundo circuito.' },
-  { q: 'E se chover no dia?', a: 'A gente monitora e avisa com antecedência. Chuva leve não cancela. Chuva forte que inviabilize o acesso: remarcamos sem custo.' },
+  { q: 'Where exactly do the circuits depart from?', a: 'All circuits depart from the center of Santo Amaro do Maranhão. We pick up at guesthouses and arranged meeting points within the city at 7:30am or 8am, depending on the chosen circuit.' },
+  { q: 'What\'s the best time to visit?', a: 'From July to September the lagoons are at their peak — full, blue, and at their most beautiful. From October to December the water level drops but the tour is still great and much less crowded. January to June is the heavy rainy season.' },
+  { q: 'Are the circuits suitable for children?', a: 'The Betânia and Andorinhas circuits are the most family-friendly — shorter trail, relaxed pace. For the others, we recommend ages 10 and up.' },
+  { q: 'Do I need to be physically fit?', a: 'For most circuits, no. The 4×4 vehicle covers most of the route. There are short walks through the sand. The Rancharia circuit is the most demanding — up to 4 km walking on sand.' },
+  { q: 'How does booking work?', a: 'Everything is done via WhatsApp. Choose your circuit, confirm the date and number of people. We ask for a 30% deposit via Pix to secure your spot. The rest is paid on the day.' },
+  { q: 'Can I combine more than one circuit?', a: 'Yes, and it\'s very common. We put together a combined itinerary and offer a progressive discount from the second circuit onward.' },
+  { q: 'What if it rains on the day?', a: 'We monitor the weather and let you know in advance. Light rain does not cancel the tour. Heavy rain that blocks access: we reschedule at no cost.' },
 ];
 (function(){
   const list = document.getElementById('faq-list');
@@ -663,7 +652,7 @@ const faqs = [
   });
 })();
 
-// ── Seleção de circuitos (cards + chips do formulário sincronizados)
+// ── Circuit selection (cards + form chips synced)
 const selectedCircuits = new Set();
 
 function cardBtnId(name){ return 'card-btn-' + name.replace(/ /g,'-'); }
@@ -677,7 +666,7 @@ function updateSelectionBar(){
     bar.classList.add('hidden-bar');
   } else {
     count.textContent = n;
-    label.textContent = n === 1 ? 'circuito adicionado ao formulário' : 'circuitos adicionados ao formulário';
+    label.textContent = n === 1 ? 'circuit added to the form' : 'circuits added to the form';
     bar.classList.remove('hidden-bar');
     bar.style.transform = 'translateX(-50%) translateY(0)';
   }
@@ -697,14 +686,13 @@ function syncCardBtn(name, selected){
   const lbl = btn.querySelector('.btn-label');
   if(selected){
     btn.classList.replace('btn-select','btn-selected');
-    lbl.innerHTML = '<svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor" style="flex-shrink:0"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg> Selecionado';
+    lbl.innerHTML = '<svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor" style="flex-shrink:0"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg> Selected';
   } else {
     btn.classList.replace('btn-selected','btn-select');
-    lbl.textContent = 'Selecionar';
+    lbl.textContent = 'Select';
   }
 }
 
-// Botão do card: seleciona e rola para o formulário
 function toggleCircuito(name){
   const adding = !selectedCircuits.has(name);
   if(adding) selectedCircuits.add(name);
@@ -717,7 +705,6 @@ function toggleCircuito(name){
   }, 60);
 }
 
-// Chip do formulário: mantém botão do card sincronizado
 document.querySelectorAll('.circuit-chip').forEach(function(btn){
   btn.addEventListener('click', function(){
     const name = this.dataset.circuit;
@@ -742,17 +729,17 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
   }
   const fd = new FormData(this);
   const get = function(k){ return (fd.get(k)||'').toString().trim(); };
-  const circuitosList = [...selectedCircuits].map(function(c){ return 'Circuito ' + c; }).join(', ');
+  const circuitosList = [...selectedCircuits].map(function(c){ return c + ' Circuit'; }).join(', ');
   const acomp = get('pessoas');
   const linhas = [
-    'Olá, Brisa Azul! Gostaria de reservar um passeio.',
+    'Hello, Brisa Azul! I\'d like to book a tour.',
     '',
-    '*Circuito(s):* ' + circuitosList,
-    '*Nome:* ' + get('nome'),
+    '*Circuit(s):* ' + circuitosList,
+    '*Name:* ' + get('nome'),
     '*WhatsApp:* ' + get('telefone'),
-    get('data')   ? '*Data do passeio:* ' + get('data')                                  : null,
-    acomp !== ''  ? '*Acompanhantes:* ' + (acomp === '0' ? 'nenhum (somente eu)' : acomp) : null,
-    get('obs')    ? '*Obs:* ' + get('obs')                                                : null,
+    get('data')   ? '*Tour date:* ' + get('data')                                         : null,
+    acomp !== ''  ? '*Companions:* ' + (acomp === '0' ? 'none (just me)' : acomp)        : null,
+    get('obs')    ? '*Notes:* ' + get('obs')                                              : null,
   ].filter(function(l){ return l !== null; }).join('\n');
   window.open('https://wa.me/5598999111749?text=' + encodeURIComponent(linhas), '_blank');
 });
@@ -760,14 +747,14 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
 // ── Coverflow gallery
 (function(){
   const photos = [
-    { src:'images/galeria/01.jpg', alt:'Circuito Emendadas — lagoas interligadas' },
-    { src:'images/galeria/02.jpg', alt:'Circuito Américas — lagoa turquesa remota' },
-    { src:'images/galeria/03.jpg', alt:'Circuito Andorinhas — pôr do sol nas dunas' },
-    { src:'images/galeria/04.jpg', alt:'Circuito Betânia — comunidade e lagoa' },
-    { src:'images/galeria/05.jpg', alt:'Circuito Ponta Verde — vista dupla' },
-    { src:'images/galeria/06.jpg', alt:'Circuito Rancharia — o mais fundo no parque' },
-    { src:'images/galeria/07.jpg', alt:'Dunas dos Lençóis Maranhenses' },
-    { src:'images/galeria/08.jpg', alt:'Lagoa cristalina ao entardecer' },
+    { src:'images/galeria/01.jpg', alt:'Emendadas Circuit — connected lagoons' },
+    { src:'images/galeria/02.jpg', alt:'Américas Circuit — remote turquoise lagoon' },
+    { src:'images/galeria/03.jpg', alt:'Andorinhas Circuit — sunset on the dunes' },
+    { src:'images/galeria/04.jpg', alt:'Betânia Circuit — community and lagoon' },
+    { src:'images/galeria/05.jpg', alt:'Ponta Verde Circuit — double view' },
+    { src:'images/galeria/06.jpg', alt:'Rancharia Circuit — deepest in the park' },
+    { src:'images/galeria/07.jpg', alt:'Dunes of Lençóis Maranhenses' },
+    { src:'images/galeria/08.jpg', alt:'Crystal lagoon at sunset' },
   ];
   const W = 300, H = 384, GAP = 24, ROTATE = 30, TX = 48;
   let active = 0;
@@ -775,7 +762,6 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
   const dots  = document.getElementById('cf-dots');
   const counter = document.getElementById('cf-counter');
 
-  // build cards
   const cards = photos.map((p, i) => {
     const el = document.createElement('div');
     el.style.cssText = `position:absolute;width:${W}px;height:${H}px;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform .45s cubic-bezier(.25,.46,.45,.94),opacity .45s ease;`;
@@ -788,10 +774,9 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
     return el;
   });
 
-  // dots
   const dotEls = photos.map((_, i) => {
     const d = document.createElement('button');
-    d.setAttribute('aria-label', `Foto ${i+1}`);
+    d.setAttribute('aria-label', `Photo ${i+1}`);
     d.style.cssText = 'border-radius:9999px;transition:all .3s;border:none;cursor:pointer;';
     d.addEventListener('click', () => go(i));
     dots.appendChild(d);
@@ -837,7 +822,6 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
     if(e.key==='ArrowLeft')  go(active-1);
   });
 
-  // drag/swipe
   let dragX=0, dragging=false;
   wrap.addEventListener('pointerdown', e => { dragX=e.clientX; dragging=true; wrap.setPointerCapture(e.pointerId); });
   wrap.addEventListener('pointermove', e => {
