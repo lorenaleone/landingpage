@@ -227,48 +227,6 @@
 </section>
 
 <!-- ═══════════════════════════════════════════
-     POR QUE A BRISA AZUL
-═══════════════════════════════════════════ -->
-<section class="py-20 lg:py-24 bg-lagoon-800 text-sand-50">
-  <div class="mx-auto max-w-6xl px-5 sm:px-8">
-    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
-      <div>
-        <p class="eyebrow text-lagoon-300">Por que a Brisa Azul</p>
-        <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50">
-          Cinco motivos para nos escolher.
-        </h2>
-    </div>
-    <ol class="grid sm:grid-cols-2 lg:grid-cols-5 divide-x divide-y divide-lagoon-600/30 border border-lagoon-600/30 rounded-2xl overflow-hidden">
-      <li class="p-7 hover:bg-lagoon-700/60 transition-colors">
-        <span class="font-display text-lagoon-300 text-xl">01</span>
-        <h3 class="mt-5 font-display text-[22px] text-sand-50">Saída de Santo Amaro</h3>
-        <p class="mt-3 text-sand-100/60 text-sm leading-relaxed">Não precisa ir até Barreirinhas. Mais tempo nas lagoas, menos na estrada.</p>
-      </li>
-      <li class="p-7 hover:bg-lagoon-700/60 transition-colors">
-        <span class="font-display text-lagoon-300 text-xl">02</span>
-        <h3 class="mt-5 font-display text-[22px] text-sand-50">Grupos de até 8</h3>
-        <p class="mt-3 text-sand-100/60 text-sm leading-relaxed">Menos gente, mais atenção do guia e mais silêncio nas lagoas.</p>
-      </li>
-      <li class="p-7 hover:bg-lagoon-700/60 transition-colors">
-        <span class="font-display text-lagoon-300 text-xl">03</span>
-        <h3 class="mt-5 font-display text-[22px] text-sand-50">Guias nativos</h3>
-        <p class="mt-3 text-sand-100/60 text-sm leading-relaxed">Toda a equipe é de Santo Amaro, com credenciamento no Cadastur.</p>
-      </li>
-      <li class="p-7 hover:bg-lagoon-700/60 transition-colors">
-        <span class="font-display text-lagoon-300 text-xl">04</span>
-        <h3 class="mt-5 font-display text-[22px] text-sand-50">Lagoas remotas</h3>
-        <p class="mt-3 text-sand-100/60 text-sm leading-relaxed">Acessamos lagoas que o roteiro padrão de Barreirinhas não cobre.</p>
-      </li>
-      <li class="p-7 hover:bg-lagoon-700/60 transition-colors">
-        <span class="font-display text-lagoon-300 text-xl">05</span>
-        <h3 class="mt-5 font-display text-[22px] text-sand-50">Reserva direta</h3>
-        <p class="mt-3 text-sand-100/60 text-sm leading-relaxed">Você fala com a gente no WhatsApp. Sem agência no meio, sem taxa.</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════
      CIRCUITOS
 ═══════════════════════════════════════════ -->
 <section id="circuitos" class="py-20 lg:py-28 bg-sand-100/50">
@@ -451,7 +409,7 @@
      RESERVAR
 ═══════════════════════════════════════════ -->
 <section id="reservar" class="py-20 lg:py-28 bg-lagoon-800 text-sand-50">
-  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+  <div class="mx-auto max-w-5xl px-5 sm:px-8">
 
     <!-- Título acima do form -->
     <div class="mb-8">
@@ -479,8 +437,8 @@
 
       <div class="h-px bg-ink-900/8 mb-6"></div>
 
-      <!-- Campos em grade 3 colunas → mais quadrado -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6">
+      <!-- Campos em grade horizontal — tudo numa linha só -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-5">
         <label class="block sm:col-span-2">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Nome completo</span>
           <input name="nome" type="text" required autocomplete="name"
@@ -491,15 +449,15 @@
           <input name="telefone" type="tel" required autocomplete="tel"
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block" id="field-data">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data</span>
-          <input name="data" type="date" required
-            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
-        </label>
-        <label class="block col-span-2 sm:col-span-3" id="field-pessoas">
+        <label class="block" id="field-pessoas">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Acompanhantes <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— pode ser 0</span></span>
           <input name="pessoas" type="number" min="0" max="20" placeholder="0" required
-            class="mt-2 w-32 border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
+        </label>
+        <label class="block col-span-2 sm:col-span-2" id="field-data">
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data do passeio</span>
+          <input name="data" type="date" required
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
       </div>
 
@@ -666,7 +624,7 @@ const faqs = [
   faqs.forEach((item, i) => {
     const li = document.createElement('li');
     li.innerHTML = `
-      <button class="faq-btn flex w-full items-start justify-between gap-6 py-6 text-left" aria-expanded="false">
+      <button class="faq-btn flex w-full items-start justify-between gap-6 py-4 text-left" aria-expanded="false">
         <span class="font-display text-lg sm:text-xl text-ink-900">${item.q}</span>
         <span class="faq-icon mt-1 inline-flex h-7 w-7 flex-none items-center justify-center rounded-full border border-ink-900/15 text-ink-700 transition-all duration-200 flex-shrink-0">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
