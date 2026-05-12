@@ -491,11 +491,6 @@
           <input name="telefone" type="tel" required autocomplete="tel"
             class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block sm:col-span-2">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">E-mail</span>
-          <input name="email" type="email" required autocomplete="email"
-            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
-        </label>
         <label class="block" id="field-data">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data</span>
           <input name="data" type="date" required
@@ -779,7 +774,6 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
     '*Circuito(s):* ' + circuitosList,
     '*Nome:* ' + get('nome'),
     '*WhatsApp:* ' + get('telefone'),
-    '*E-mail:* ' + get('email'),
     get('data')   ? '*Data do passeio:* ' + get('data')                                  : null,
     acomp !== ''  ? '*Acompanhantes:* ' + (acomp === '0' ? 'nenhum (somente eu)' : acomp) : null,
     get('obs')    ? '*Obs:* ' + get('obs')                                                : null,
