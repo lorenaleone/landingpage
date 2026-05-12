@@ -451,106 +451,67 @@
      RESERVAR
 ═══════════════════════════════════════════ -->
 <section id="reservar" class="py-20 lg:py-28 bg-lagoon-800 text-sand-50">
-  <div class="mx-auto max-w-6xl px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
 
-    <!-- Info lateral -->
-    <div class="lg:col-span-4">
+    <!-- Título acima do form -->
+    <div class="mb-8">
       <p class="eyebrow text-lagoon-300">Reserve seu circuito</p>
-      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50 leading-tight">Responderemos você o mais breve possível.</h2>
-      <p class="mt-4 text-sand-100/60 leading-relaxed text-sm max-w-xs">Preencha o formulário e seus dados chegam direto na conversa da Brisa Azul. A gente confirma disponibilidade e manda todos os detalhes.</p>
-
-      <div class="mt-9 space-y-4 text-sm">
-        <a href="https://wa.me/5598999111749" target="_blank" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
-          </span>
-          (98) 99123-4567
-        </a>
-        <a href="mailto:contato@brisaazulviagens.com.br" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </span>
-          contato@brisaazulviagens.com.br
-        </a>
-        <a href="https://instagram.com/brisaazul.viagens" target="_blank" class="flex items-center gap-3 text-sand-100/70 hover:text-sand-50 transition-colors">
-          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sand-100/15 flex-shrink-0">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </span>
-          @brisaazul.viagens
-        </a>
-      </div>
-
-      <div class="mt-8 pt-8 border-t border-sand-100/10 text-xs text-sand-100/40">
-        <p class="uppercase tracking-widest2 mb-2">Pagamento</p>
-        <p>Pix · Cartão (até 2×) · Dinheiro</p>
-      </div>
+      <h2 class="h-display mt-4 text-3xl sm:text-4xl text-sand-50">Responderemos você o mais breve possível.</h2>
+      <p class="mt-4 text-sand-100/60 leading-relaxed text-sm">Preencha o formulário e seus dados chegam direto na conversa da Brisa Azul. A gente confirma disponibilidade e manda todos os detalhes.</p>
     </div>
 
     <!-- Formulário -->
-    <form id="booking-form" class="lg:col-span-8 rounded-2xl bg-sand-50 text-ink-900 p-6 sm:p-8">
+    <form id="booking-form" class="rounded-2xl bg-sand-50 text-ink-900 p-7 sm:p-10">
 
-      <!-- Seleção de circuitos -->
-      <div class="mb-7" id="circuit-block">
-        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) de interesse <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
+      <!-- Circuitos -->
+      <div class="mb-6" id="circuit-block">
+        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
         <div id="circuit-picker" class="flex flex-wrap gap-2">
-          <button type="button" class="circuit-chip" data-circuit="Emendadas">
-            <span class="chip-dot"></span>Emendadas <span class="chip-dur">~6h</span>
-          </button>
-          <button type="button" class="circuit-chip" data-circuit="Américas">
-            <span class="chip-dot"></span>Américas <span class="chip-dur">~7h</span>
-          </button>
-          <button type="button" class="circuit-chip" data-circuit="Andorinhas">
-            <span class="chip-dot"></span>Andorinhas <span class="chip-dur">~4h</span>
-          </button>
-          <button type="button" class="circuit-chip" data-circuit="Betânia">
-            <span class="chip-dot"></span>Betânia <span class="chip-dur">~5h</span>
-          </button>
-          <button type="button" class="circuit-chip" data-circuit="Ponta Verde">
-            <span class="chip-dot"></span>Ponta Verde <span class="chip-dur">~6h</span>
-          </button>
-          <button type="button" class="circuit-chip" data-circuit="Rancharia">
-            <span class="chip-dot"></span>Rancharia <span class="chip-dur">~8h</span>
-          </button>
+          <button type="button" class="circuit-chip" data-circuit="Emendadas"><span class="chip-dot"></span>Emendadas <span class="chip-dur">~6h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Américas"><span class="chip-dot"></span>Américas <span class="chip-dur">~7h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Andorinhas"><span class="chip-dot"></span>Andorinhas <span class="chip-dur">~4h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Betânia"><span class="chip-dot"></span>Betânia <span class="chip-dur">~5h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Ponta Verde"><span class="chip-dot"></span>Ponta Verde <span class="chip-dur">~6h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Rancharia"><span class="chip-dot"></span>Rancharia <span class="chip-dur">~8h</span></button>
         </div>
         <p id="circuit-error" class="mt-2 text-xs text-rust-400 hidden">Selecione ao menos um circuito.</p>
       </div>
-      <!-- /circuit-block -->
 
-      <div class="h-px bg-ink-900/8 mb-7"></div>
+      <div class="h-px bg-ink-900/8 mb-6"></div>
 
-      <!-- Campos -->
-      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-        <label class="block">
+      <!-- Campos em grade 3 colunas → mais quadrado -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6">
+        <label class="block sm:col-span-2">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Nome completo</span>
           <input name="nome" type="text" required autocomplete="name"
-            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
         <label class="block">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">WhatsApp (com DDD)</span>
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">WhatsApp</span>
           <input name="telefone" type="tel" required autocomplete="tel"
-            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block">
+        <label class="block sm:col-span-2">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">E-mail</span>
           <input name="email" type="email" required autocomplete="email"
-            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
         <label class="block" id="field-data">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data do passeio</span>
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data</span>
           <input name="data" type="date" required
-            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
+            class="mt-2 w-full border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block" id="field-pessoas">
+        <label class="block col-span-2 sm:col-span-3" id="field-pessoas">
           <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Acompanhantes <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— pode ser 0</span></span>
           <input name="pessoas" type="number" min="0" max="20" placeholder="0" required
-            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
+            class="mt-2 w-32 border-0 border-b border-ink-900/15 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
       </div>
 
       <label class="mt-6 block">
-        <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Observações <span class="normal-case tracking-normal text-ink-400/60 text-[11px]">— opcional</span></span>
+        <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Observações <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— opcional</span></span>
         <textarea name="obs" rows="2" placeholder="Restrição alimentar, crianças, datas flexíveis…"
-          class="mt-2 w-full rounded-lg border border-ink-900/10 bg-sand-100/50 px-3.5 py-2.5 text-sm text-ink-800 resize-none placeholder:text-ink-400/50 focus:border-lagoon-500 transition-colors"></textarea>
+          class="mt-2 w-full rounded-lg border border-ink-900/10 bg-sand-100/50 px-3.5 py-2.5 text-sm text-ink-800 resize-none placeholder:text-ink-400/45 focus:border-lagoon-500 transition-colors"></textarea>
       </label>
 
       <div class="mt-7 flex items-center gap-5">
@@ -558,7 +519,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.04 0C5.46 0 .1 5.34.1 11.91c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.93 11.93 0 0 0 5.74 1.46h.01c6.58 0 11.94-5.34 11.94-11.9 0-3.18-1.24-6.17-3.49-8.41z"/></svg>
           Enviar pelo WhatsApp
         </button>
-        <p class="text-xs text-ink-400 leading-relaxed">Você será redirecionado para o<br/>WhatsApp com a mensagem pronta.</p>
+        <p class="text-xs text-ink-400 leading-relaxed">Você será redirecionado<br/>para o WhatsApp.</p>
       </div>
     </form>
 
