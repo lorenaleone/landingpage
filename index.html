@@ -9,6 +9,10 @@
   <meta property="og:description" content="Seis circuitos exclusivos saindo de Santo Amaro. Lagoas escondidas, grupos pequenos e guias nativos." />
   <meta property="og:image" content="images/hero.jpg" />
   <meta property="og:type" content="website" />
+  <!-- Preload imagens críticas — hero e about são acima da dobra -->
+  <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/about.jpg" />
+  <link rel="preload" as="image" href="images/galeria/01.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -275,7 +279,7 @@
       <article class="relative flex flex-col rounded-2xl border border-lagoon-400/50 ring-1 ring-lagoon-400/25 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <!-- imagem -->
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/01.jpg" alt="Circuito Emendadas" loading="eager" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/01.jpg" alt="Circuito Emendadas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute top-3 left-3 inline-flex rounded-full bg-lagoon-600 px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Mais procurado</span>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
@@ -295,7 +299,7 @@
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/02.jpg" alt="Circuito Américas" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/02.jpg" alt="Circuito Américas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 7h30 · ~7h</span>
         </div>
@@ -313,7 +317,7 @@
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/03.jpg" alt="Circuito Andorinhas" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/03.jpg" alt="Circuito Andorinhas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 14h · ~4h</span>
         </div>
@@ -331,7 +335,7 @@
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/04.jpg" alt="Circuito Betânia" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/04.jpg" alt="Circuito Betânia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~5h</span>
         </div>
@@ -349,7 +353,7 @@
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/05.jpg" alt="Circuito Ponta Verde" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/05.jpg" alt="Circuito Ponta Verde" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
         </div>
@@ -367,7 +371,7 @@
 
       <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
         <div class="relative h-48 bg-sand-200 overflow-hidden">
-          <img src="images/galeria/06.jpg" alt="Circuito Rancharia" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <img src="images/galeria/06.jpg" alt="Circuito Rancharia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~8h</span>
         </div>
