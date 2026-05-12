@@ -1,6 +1,6 @@
 # Brisa Azul Viagens — Landing Page
 
-Landing page fictícia de agência de turismo nos Lençóis Maranhenses, desenvolvida como projeto de portfólio.
+Landing page fictícia de agência de turismo nos Lençóis Maranhenses.
 
 🌐 **Acesse online:** [lorenaleone.github.io/landingpage](https://lorenaleone.github.io/landingpage/)
 
@@ -8,13 +8,14 @@ Landing page fictícia de agência de turismo nos Lençóis Maranhenses, desenvo
 
 ## Stack
 
+Página 100% estática — **sem build, sem dependências, sem Node.js**.
+
 | Tecnologia | Uso |
 |---|---|
-| [Next.js 14](https://nextjs.org) | Framework React (App Router) |
-| [TypeScript](https://www.typescriptlang.org) | Tipagem estática |
-| [Tailwind CSS](https://tailwindcss.com) | Estilização |
-| [GitHub Pages](https://pages.github.com) | Hospedagem (export estático) |
-| [GitHub Actions](https://github.com/features/actions) | Deploy automático a cada push |
+| HTML + CSS + JavaScript puro | Toda a página em um único `index.html` |
+| [Tailwind CSS CDN](https://tailwindcss.com/docs/installation/play-cdn) | Estilização via Play CDN |
+| [Google Fonts](https://fonts.google.com) | Fraunces (títulos) + Inter (texto) |
+| [GitHub Pages](https://pages.github.com) | Hospedagem direta da branch `main` |
 
 ---
 
@@ -23,169 +24,92 @@ Landing page fictícia de agência de turismo nos Lençóis Maranhenses, desenvo
 ```
 landingpage/
 │
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # CI/CD → GitHub Pages (automático)
+├── index.html          # ← toda a página aqui
 │
-├── public/
-│   └── images/
-│       ├── README.md           # ← guia de upload de fotos
-│       ├── hero.jpg            # foto de fundo da capa
-│       ├── about.jpg           # foto do fundador / equipe
-│       └── galeria/
-│           ├── 01.jpg          # Circuito Emendadas
-│           ├── 02.jpg          # Circuito Américas
-│           ├── 03.jpg          # Circuito Andorinhas
-│           ├── 04.jpg          # Circuito Betânia
-│           ├── 05.jpg          # Circuito Ponta Verde
-│           ├── 06.jpg          # Circuito Rancharia
-│           ├── 07.jpg          # Foto extra (opcional)
-│           └── 08.jpg          # Foto extra (opcional)
+├── images/
+│   ├── hero.jpg        # foto de fundo da capa
+│   ├── about.jpg       # foto do fundador / equipe
+│   └── galeria/
+│       ├── 01.jpg      # Circuito Emendadas
+│       ├── 02.jpg      # Circuito Américas
+│       ├── 03.jpg      # Circuito Andorinhas
+│       ├── 04.jpg      # Circuito Betânia
+│       ├── 05.jpg      # Circuito Ponta Verde
+│       ├── 06.jpg      # Circuito Rancharia
+│       ├── 07.jpg      # Foto extra (opcional)
+│       └── 08.jpg      # Foto extra (opcional)
 │
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx          # metadata, fontes, SEO global
-│   │   ├── page.tsx            # home — monta todos os blocos
-│   │   ├── globals.css         # design tokens e classes utilitárias
-│   │   ├── robots.ts           # robots.txt gerado pelo Next.js
-│   │   └── sitemap.ts          # sitemap.xml gerado pelo Next.js
-│   │
-│   ├── components/
-│   │   ├── Header.tsx          # nav fixa, transparente no topo, sólida ao rolar
-│   │   ├── Hero.tsx            # capa com foto de fundo, stats e CTAs
-│   │   ├── Marquee.tsx         # faixa animada de diferenciais
-│   │   ├── About.tsx           # história do fundador
-│   │   ├── WhyUs.tsx           # 5 motivos (fundo escuro)
-│   │   ├── Circuitos.tsx       # 6 cards de circuito com highlights
-│   │   ├── Gallery.tsx         # carrossel coverflow 3D (sem biblioteca)
-│   │   ├── FAQ.tsx             # perguntas frequentes em acordeão
-│   │   ├── Booking.tsx         # formulário → abre WhatsApp com dados preenchidos
-│   │   ├── Footer.tsx          # links, contatos, copyright
-│   │   ├── FloatingWhatsApp.tsx# botão flutuante WhatsApp
-│   │   ├── Logo.tsx            # logo SVG inline (palmeira + onda)
-│   │   └── JsonLd.tsx          # structured data (schema.org)
-│   │
-│   └── lib/
-│       ├── content.ts          # ← EDITE AQUI: todos os textos da página
-│       ├── site.ts             # ← EDITE AQUI: nome, telefone, e-mail, redes
-│       └── img.ts              # helper de caminhos de imagem
-│
-├── tailwind.config.ts          # paleta de cores e tipografia customizada
-├── next.config.mjs             # export estático + basePath GitHub Pages
-├── tsconfig.json
-├── package.json
-└── README.md                   # este arquivo
-```
-
----
-
-## Como editar o conteúdo
-
-Todo o texto da página está centralizado em dois arquivos — **não precisa tocar nos componentes**.
-
-### Textos, circuitos e FAQ → `src/lib/content.ts`
-
-```ts
-// Hero
-export const hero = { title: '...', sub: '...' }
-
-// 6 circuitos
-export const circuitos = [{ name: 'Circuito Emendadas', ... }]
-
-// Perguntas frequentes
-export const faq = [{ q: '...', a: '...' }]
-```
-
-### Nome, telefone, e-mail, Instagram → `src/lib/site.ts`
-
-```ts
-export const site = {
-  name: 'Brisa Azul Viagens',
-  whatsapp: '5598991234567',   // sem + nem espaço
-  email: 'contato@...',
-  instagram: 'brisaazul.viagens',
-  address: { ... },
-}
+└── README.md
 ```
 
 ---
 
 ## Como adicionar as fotos
 
-> Faça o upload direto pelo GitHub — sem precisar clonar o repositório.
+> Upload direto pelo GitHub — sem precisar clonar o repositório.
 
 1. Acesse **[github.com/lorenaleone/landingpage](https://github.com/lorenaleone/landingpage)**
-2. Navegue até `public/images/`
+2. Navegue até a pasta `images/` (ou `images/galeria/`)
 3. Clique em **Add file → Upload files**
-4. Suba os arquivos respeitando os nomes da tabela abaixo
-5. Commit na `main` → deploy automático em ~2 min
+4. Suba os arquivos respeitando os nomes abaixo
+5. Commit na `main` → a página atualiza em segundos
 
-| Caminho no repo | Onde aparece na página | Tamanho ideal |
+| Arquivo | Onde aparece | Tamanho ideal |
 |---|---|---|
-| `public/images/hero.jpg` | Foto de fundo da capa | 2000 × 1300 px |
-| `public/images/about.jpg` | Foto do fundador / equipe | 900 × 1200 px |
-| `public/images/galeria/01.jpg` | Galeria — Circuito Emendadas | 1200 × 900 px |
-| `public/images/galeria/02.jpg` | Galeria — Circuito Américas | 1200 × 900 px |
-| `public/images/galeria/03.jpg` | Galeria — Circuito Andorinhas | 1200 × 900 px |
-| `public/images/galeria/04.jpg` | Galeria — Circuito Betânia | 1200 × 900 px |
-| `public/images/galeria/05.jpg` | Galeria — Circuito Ponta Verde | 1200 × 900 px |
-| `public/images/galeria/06.jpg` | Galeria — Circuito Rancharia | 1200 × 900 px |
-| `public/images/galeria/07.jpg` | Galeria — foto extra (opcional) | 1200 × 900 px |
-| `public/images/galeria/08.jpg` | Galeria — foto extra (opcional) | 1200 × 900 px |
+| `images/hero.jpg` | Foto de fundo da capa | 2000 × 1300 px |
+| `images/about.jpg` | Foto do fundador / equipe | 900 × 1200 px |
+| `images/galeria/01.jpg` | Galeria — Circuito Emendadas | 1200 × 900 px |
+| `images/galeria/02.jpg` | Galeria — Circuito Américas | 1200 × 900 px |
+| `images/galeria/03.jpg` | Galeria — Circuito Andorinhas | 1200 × 900 px |
+| `images/galeria/04.jpg` | Galeria — Circuito Betânia | 1200 × 900 px |
+| `images/galeria/05.jpg` | Galeria — Circuito Ponta Verde | 1200 × 900 px |
+| `images/galeria/06.jpg` | Galeria — Circuito Rancharia | 1200 × 900 px |
+| `images/galeria/07.jpg` | Galeria — foto extra (opcional) | 1200 × 900 px |
+| `images/galeria/08.jpg` | Galeria — foto extra (opcional) | 1200 × 900 px |
 
 > **Formato:** JPG ou JPEG · **Peso máximo:** 800 KB por foto
 
 ---
 
-## Rodando localmente
+## Como editar o conteúdo
 
-```bash
-# 1. Clone
-git clone https://github.com/lorenaleone/landingpage.git
-cd landingpage
+Tudo está no `index.html`. Para editar textos, circuitos, telefone etc.:
 
-# 2. Instale as dependências
-npm install
+1. Abra `index.html` no GitHub (clique no arquivo → ícone de lápis ✏️)
+2. Use **Ctrl+F** para localizar o trecho que quer alterar
+3. Edite e faça commit — pronto
 
-# 3. Inicie o servidor de desenvolvimento
-npm run dev
-# → http://localhost:3000
-```
+### Dados de contato (WhatsApp, e-mail, Instagram)
 
-> No dev local o `basePath` é ignorado, então as imagens aparecem
-> em `localhost:3000/images/hero.jpg` (sem o `/landingpage`).
+Procure por `5598991234567` no arquivo para encontrar o número do WhatsApp.  
+Procure por `contato@brisaazul.tur.br` para encontrar o e-mail.
 
 ---
 
-## Deploy
+## Ativar o GitHub Pages (primeira vez)
 
-O deploy é **automático**: qualquer push na branch `main` dispara o
-workflow `.github/workflows/deploy.yml`, que:
-
-1. Faz o build estático (`npm run build` → pasta `out/`)
-2. Publica na branch `gh-pages` via GitHub Actions
-
-Para ativar pela primeira vez:
 1. Vá em **Settings → Pages** no repositório
-2. Em **Source**, selecione **GitHub Actions**
-3. Salve — pronto
+2. Em **Source**, selecione **Deploy from a branch**
+3. Branch: **main** · Pasta: **/ (root)**
+4. Clique **Save**
+5. Aguarde ~1 minuto e acesse `https://lorenaleone.github.io/landingpage/`
 
 ---
 
 ## Seções da página
 
-| # | Seção | Componente |
+| # | Seção | Descrição |
 |---|---|---|
-| 1 | Header fixo com nav | `Header.tsx` |
-| 2 | Hero com foto e stats | `Hero.tsx` |
-| 3 | Faixa animada de diferenciais | `Marquee.tsx` |
-| 4 | Sobre / história do fundador | `About.tsx` |
-| 5 | Por que a Brisa Azul (5 motivos) | `WhyUs.tsx` |
-| 6 | 6 Circuitos com detalhes | `Circuitos.tsx` |
-| 7 | Galeria coverflow | `Gallery.tsx` |
-| 8 | Perguntas frequentes | `FAQ.tsx` |
-| 9 | Formulário → WhatsApp | `Booking.tsx` |
-| 10 | Rodapé | `Footer.tsx` |
+| 1 | Header | Nav fixa, transparente no topo, sólida ao rolar |
+| 2 | Hero | Capa com foto de fundo, stats e CTAs |
+| 3 | Faixa animada | Diferenciais em loop infinito |
+| 4 | Sobre | História do fundador |
+| 5 | Por que a Brisa Azul | 5 motivos com fundo escuro |
+| 6 | Circuitos | 6 cards de circuito com highlights |
+| 7 | Galeria | Carrossel coverflow 3D |
+| 8 | FAQ | Perguntas frequentes em acordeão |
+| 9 | Reserva | Formulário → abre WhatsApp com dados preenchidos |
+| 10 | Rodapé | Links, contatos, copyright |
 
 ---
 
