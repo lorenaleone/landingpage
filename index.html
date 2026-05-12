@@ -489,19 +489,6 @@
     <!-- Formulário -->
     <form id="booking-form" class="lg:col-span-8 rounded-2xl bg-sand-50 text-ink-900 p-6 sm:p-8">
 
-      <!-- Tipo de solicitação -->
-      <div class="mb-7">
-        <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">O que você precisa?</p>
-        <div id="intent-picker" class="flex flex-wrap gap-2">
-          <button type="button" class="intent-btn circuit-chip" data-intent="reservar">
-            <span class="chip-dot"></span>Quero reservar um passeio
-          </button>
-          <button type="button" class="intent-btn circuit-chip" data-intent="info">
-            <span class="chip-dot"></span>Quero tirar uma dúvida
-          </button>
-        </div>
-      </div>
-
       <!-- Seleção de circuitos -->
       <div class="mb-7" id="circuit-block">
         <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) de interesse <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
@@ -548,15 +535,15 @@
           <input name="email" type="email" required autocomplete="email"
             class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900 placeholder:text-ink-400/50" />
         </label>
-        <label class="block" id="field-data" style="display:none">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data prevista</span>
-          <input name="data" type="date"
+        <label class="block" id="field-data">
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Data do passeio</span>
+          <input name="data" type="date" required
             class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
-        <label class="block sm:col-span-2" id="field-pessoas" style="display:none">
-          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Quantas pessoas</span>
-          <input name="pessoas" type="number" min="1" max="8"
-            class="mt-2 w-full sm:w-1/2 border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
+        <label class="block" id="field-pessoas">
+          <span class="text-[10px] uppercase tracking-widest2 text-ink-400">Acompanhantes <span class="normal-case tracking-normal text-ink-400/55 text-[11px]">— pode ser 0</span></span>
+          <input name="pessoas" type="number" min="0" max="20" placeholder="0" required
+            class="mt-2 w-full border-0 border-b border-ink-900/18 bg-transparent pb-2 pt-0.5 text-[15px] text-ink-900" />
         </label>
       </div>
 
@@ -744,19 +731,72 @@ const faqs = [
   });
 })();
 
-// ── Circuit picker (multi-select)
+// ── Seleção de circuitos (cards + chips do formulário sincronizados)
 const selectedCircuits = new Set();
-document.querySelectorAll('.circuit-chip').forEach(btn => {
+
+function cardBtnId(name){ return 'card-btn-' + name.replace(/ /g,'-'); }
+
+function updateSelectionBar(){
+  const bar   = document.getElementById('selection-bar');
+  const count = document.getElementById('sel-count');
+  const label = document.getElementById('sel-label');
+  const n = selectedCircuits.size;
+  if(n === 0){
+    bar.classList.add('hidden-bar');
+  } else {
+    count.textContent = n;
+    label.textContent = n === 1 ? 'circuito adicionado ao formulário' : 'circuitos adicionados ao formulário';
+    bar.classList.remove('hidden-bar');
+    bar.style.transform = 'translateX(-50%) translateY(0)';
+  }
+}
+
+function syncChip(name, selected){
+  const chip = document.querySelector(`.circuit-chip[data-circuit="${name}"]`);
+  if(!chip) return;
+  if(selected) chip.classList.add('selected');
+  else         chip.classList.remove('selected');
+  document.getElementById('circuit-error').classList.toggle('hidden', selectedCircuits.size > 0);
+}
+
+function syncCardBtn(name, selected){
+  const btn = document.getElementById(cardBtnId(name));
+  if(!btn) return;
+  const lbl = btn.querySelector('.btn-label');
+  if(selected){
+    btn.classList.replace('btn-select','btn-selected');
+    lbl.innerHTML = '<svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor" style="flex-shrink:0"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg> Selecionado';
+  } else {
+    btn.classList.replace('btn-selected','btn-select');
+    lbl.textContent = 'Selecionar';
+  }
+}
+
+// Botão do card: seleciona e rola para o formulário
+function toggleCircuito(name){
+  const adding = !selectedCircuits.has(name);
+  if(adding) selectedCircuits.add(name);
+  else       selectedCircuits.delete(name);
+  syncCardBtn(name, adding);
+  syncChip(name, adding);
+  updateSelectionBar();
+  setTimeout(function(){
+    document.getElementById('reservar').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 60);
+}
+
+// Chip do formulário: mantém botão do card sincronizado
+document.querySelectorAll('.circuit-chip').forEach(function(btn){
   btn.addEventListener('click', function(){
     const name = this.dataset.circuit;
-    if(selectedCircuits.has(name)){
-      selectedCircuits.delete(name);
-      this.classList.remove('selected');
-    } else {
-      selectedCircuits.add(name);
-      this.classList.add('selected');
-    }
+    const adding = !selectedCircuits.has(name);
+    if(adding) selectedCircuits.add(name);
+    else       selectedCircuits.delete(name);
+    if(adding) this.classList.add('selected');
+    else       this.classList.remove('selected');
+    syncCardBtn(name, adding);
     document.getElementById('circuit-error').classList.toggle('hidden', selectedCircuits.size > 0);
+    updateSelectionBar();
   });
 });
 
@@ -769,20 +809,21 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
     return;
   }
   const fd = new FormData(this);
-  const get = k => (fd.get(k)||'').toString().trim();
-  const circuitosList = [...selectedCircuits].map(c => `Circuito ${c}`).join(', ');
-  const msg = [
-    'Olá, Brisa Azul! Quero reservar um circuito.',
+  const get = function(k){ return (fd.get(k)||'').toString().trim(); };
+  const circuitosList = [...selectedCircuits].map(function(c){ return 'Circuito ' + c; }).join(', ');
+  const acomp = get('pessoas');
+  const linhas = [
+    'Olá, Brisa Azul! Gostaria de reservar um passeio.',
     '',
-    `*Circuito(s):* ${circuitosList}`,
-    `*Nome:* ${get('nome')}`,
-    `*WhatsApp:* ${get('telefone')}`,
-    `*E-mail:* ${get('email')}`,
-    `*Data prevista:* ${get('data')}`,
-    `*Pessoas:* ${get('pessoas')}`,
-    get('obs') ? `*Obs:* ${get('obs')}` : null,
-  ].filter(l => l !== null).join('\n');
-  window.open('https://wa.me/5598999111749?text=' + encodeURIComponent(msg), '_blank');
+    '*Circuito(s):* ' + circuitosList,
+    '*Nome:* ' + get('nome'),
+    '*WhatsApp:* ' + get('telefone'),
+    '*E-mail:* ' + get('email'),
+    get('data')   ? '*Data do passeio:* ' + get('data')                                  : null,
+    acomp !== ''  ? '*Acompanhantes:* ' + (acomp === '0' ? 'nenhum (somente eu)' : acomp) : null,
+    get('obs')    ? '*Obs:* ' + get('obs')                                                : null,
+  ].filter(function(l){ return l !== null; }).join('\n');
+  window.open('https://wa.me/5598999111749?text=' + encodeURIComponent(linhas), '_blank');
 });
 
 // ── Coverflow gallery
