@@ -3,9 +3,7 @@ import { Hero } from '@/components/Hero';
 import { Marquee } from '@/components/Marquee';
 import { About } from '@/components/About';
 import { WhyUs } from '@/components/WhyUs';
-import { Modalities } from '@/components/Modalities';
-import { Travessias } from '@/components/Travessias';
-import { Inclusions } from '@/components/Inclusions';
+import { Circuitos } from '@/components/Circuitos';
 import { Gallery } from '@/components/Gallery';
 import { FAQ } from '@/components/FAQ';
 import { Booking } from '@/components/Booking';
@@ -23,9 +21,7 @@ export default function Page() {
         <Marquee />
         <About />
         <WhyUs />
-        <Modalities />
-        <Travessias />
-        <Inclusions />
+        <Circuitos />
         <Gallery />
         <FAQ />
         <Booking />

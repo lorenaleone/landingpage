@@ -1,12 +1,12 @@
 import { site } from '@/lib/site';
-import { faq, travessias } from '@/lib/content';
+import { faq, circuitos } from '@/lib/content';
 
 export function JsonLd() {
   const business = {
     '@context': 'https://schema.org',
     '@type': 'TravelAgency',
     name: site.name,
-    description: 'Agência de trekking e travessias guiadas nos Lençóis Maranhenses.',
+    description: 'Circuitos guiados exclusivos nos Lençóis Maranhenses saindo de Santo Amaro do Maranhão.',
     url: site.url,
     telephone: `+${site.whatsapp}`,
     email: site.email,
@@ -18,25 +18,26 @@ export function JsonLd() {
       postalCode: site.address.zip,
       addressCountry: 'BR',
     },
-    areaServed: 'Lençóis Maranhenses, Maranhão, Brasil',
+    areaServed: 'Lençóis Maranhenses, Santo Amaro, Maranhão, Brasil',
     sameAs: [`https://instagram.com/${site.instagram}`],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      reviewCount: '317',
+      reviewCount: '241',
     },
   };
 
   const offers = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    itemListElement: travessias.map((t, i) => ({
+    name: 'Circuitos Brisa Azul Viagens',
+    itemListElement: circuitos.map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
         '@type': 'TouristTrip',
-        name: t.name,
-        description: t.summary,
+        name: c.name,
+        description: c.summary,
         provider: { '@type': 'TravelAgency', name: site.name },
       },
     })),

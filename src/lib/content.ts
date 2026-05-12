@@ -1,200 +1,208 @@
 export const hero = {
-  eyebrow: 'Lençóis Maranhenses · Santo Amaro do Maranhão',
-  title: 'Você não atravessa os Lençóis.',
-  titleEm: 'Você vive eles com quem nasceu lá.',
-  sub:
-    'Há 14 anos a gente guia gente de toda parte por trilhas que mapa nenhum registra. Lagoas escondidas, oásis no meio da areia, e o silêncio do parque antes do nascer do sol.',
-  primaryCta: 'Ver travessias',
-  secondaryCta: 'Falar com o Galego',
+  eyebrow: 'Santo Amaro do Maranhão · Lençóis Maranhenses',
+  title: 'Os Lençóis que\npoucos conhecem.',
+  titleEm: 'A gente leva você até eles.',
+  sub: 'Seis circuitos exclusivos saindo direto de Santo Amaro. Lagoas escondidas, dunas que mudam de forma com o vento e um parque que vale a viagem.',
+  primaryCta: 'Ver circuitos',
+  secondaryCta: 'Falar no WhatsApp',
 };
 
 export const stats = [
-  { value: '14', label: 'anos guiando' },
-  { value: '+2.500', label: 'viajantes recebidos' },
+  { value: '6', label: 'circuitos exclusivos' },
+  { value: '+1.800', label: 'viajantes atendidos' },
   { value: '4.9', label: 'estrelas no Google' },
-  { value: '12', label: 'guias nativos' },
+  { value: '100%', label: 'saindo de Santo Amaro' },
 ];
 
 export const features = [
-  'Lagoas azuis',
-  'Pôr do sol na duna',
-  'Guias nativos',
+  'Circuitos exclusivos',
+  'Saindo de Santo Amaro',
+  'Lagoas preservadas',
+  'Guias credenciados',
+  'Grupos pequenos',
+  'Transporte 4×4',
   'Cultura maranhense',
-  '4×4 · Quadriciclo · Caiaque',
-  'Travessias completas',
-  'Oásis preservados',
-  'Café da roça',
-  'Noite de céu estrelado',
+  'Pôr do sol nas dunas',
+  'Atendimento personalizado',
 ];
 
 export const about = {
-  eyebrow: 'A história do Galego',
-  title: 'Nascido entre as dunas, criado pelo vento.',
+  eyebrow: 'Quem somos',
+  title: 'Nascemos em Santo Amaro para mostrar o parque de dentro.',
   body: [
-    'O Galego cresceu em Santo Amaro do Maranhão, dentro do parque. Aprendeu a ler o vento antes de aprender a ler livro. A travessia que ele guia hoje é a mesma que fazia menino, atrás de jumento perdido.',
-    'Em 2010, virou guia oficial. De lá pra cá já levou gente de 27 países diferentes — e nenhum deles voltou pra casa sem o pé queimado e a memória cheia.',
-    'Aqui não tem aplicativo, não tem GPS, não tem roteiro de revista. Tem 12 guias da região, cada um nascido no meio do parque, e uma forma de mostrar os Lençóis que nenhuma agência de fora consegue copiar.',
+    'A Brisa Azul Viagens foi fundada em 2016 por Marcos Ribeiro, filho de pescador do Rio Preguiças, com uma ideia simples: os melhores pontos dos Lençóis Maranhenses não estão nos roteiros comuns.',
+    'Cada circuito da Brisa Azul parte do centro de Santo Amaro e acessa lagoas que a maioria dos turistas nunca vê — trilhas sem asfalto, lagoas sem selfie stick, dunas onde o único barulho é o vento.',
+    'Hoje são seis circuitos, uma equipe de guias nativos treinados e mais de 1.800 viajantes que voltaram pra casa com as pernas cansadas e a memória cheia.',
   ],
 };
 
 export const whyUs = [
   {
     n: '01',
-    title: 'Guias nativos',
-    desc: 'Os 12 guias da equipe nasceram e cresceram dentro do parque. Conhecem o terreno como quintal de casa.',
+    title: 'Saída de Santo Amaro',
+    desc: 'Não precisa ir até Barreirinhas. Nossos circuitos partem do coração do parque, o que significa mais tempo nas lagoas e menos tempo na estrada.',
   },
   {
     n: '02',
-    title: '14 anos de estrada',
-    desc: 'Desde 2010 levando viajante por aí. Já vimos cheia, seca, vento norte e dia de sol vertical.',
+    title: 'Grupos de até 8 pessoas',
+    desc: 'Trabalhamos com grupos pequenos de propósito. Menos gente, mais atenção do guia e mais silêncio nas lagoas.',
   },
   {
     n: '03',
-    title: 'Roteiros próprios',
-    desc: 'Lagoas que o turista comum não chega. A travessia é desenhada pra fugir da multidão da Lagoa Bonita.',
+    title: 'Guias nativos certificados',
+    desc: 'Toda a equipe é de Santo Amaro, com credenciamento no Cadastur e anos de experiência em terreno de areia.',
   },
   {
     n: '04',
-    title: 'Cultura local',
-    desc: 'Almoço na casa de dona Edite, café no terreiro do seu Raimundo. A viagem vira encontro.',
+    title: 'Lagoas fora do roteiro comum',
+    desc: 'Os Circuitos Américas, Betânia e Ponta Verde acessam lagoas que o roteiro padrão de Barreirinhas não cobre.',
   },
   {
     n: '05',
-    title: 'Equipamento próprio',
-    desc: 'Frota 4×4 revisada toda semana, quadriciclos novos e caiaques inflados na hora do passeio.',
+    title: 'Reserva direta, sem intermediário',
+    desc: 'Você fala com a gente no WhatsApp, combina a data e pronto. Sem agência no meio, sem taxa de conveniência.',
   },
 ];
 
-export const modalities = [
-  { key: '4x4', label: '4×4', desc: 'Travessia clássica em Toyota Bandeirante adaptada para a areia.' },
-  { key: 'quadriciclo', label: 'Quadriciclo', desc: 'Pra quem quer pilotar o próprio caminho — orientado por guia.' },
-  { key: 'caiaque', label: 'Caiaque', desc: 'Pelo rio Preguiças até o encontro com o mar, em Caburé.' },
-  { key: 'acampamento', label: 'Acampamento', desc: 'Pernoite no oásis. Rede armada, fogueira e céu estrelado.' },
-  { key: 'mini-trek', label: 'Mini trekking', desc: 'Versão curta para quem tem só 2 dias na região.' },
-];
-
-export const inclusions = {
-  title: 'Tudo pensado pra você viver o momento.',
-  items: [
-    'Água mineral durante todo o passeio',
-    'Sombreiro montado nas paradas das lagoas',
-    'Cadeiras de praia e canga',
-    '12 guias especializados, todos credenciados',
-    'Café da manhã regional nos pernoites',
-    'Almoço caseiro nas casas de comunidade',
-    'Resgate 4×4 incluso (vento forte ou chuva)',
-    'Seguro viagem para todos os participantes',
-  ],
-  notIncluded: [
-    'Transporte rodoviário até Santo Amaro',
-    'Bebidas alcoólicas',
-    'Refeições fora do roteiro do dia',
-    'Gorjetas e despesas pessoais',
-  ],
-  bring: [
-    'Mochila pequena (até 25L)',
-    'Garrafa d\'água reutilizável',
-    'Protetor solar fator 50+',
-    'Roupa leve, de secagem rápida',
-    'Óculos de sol e chapéu',
-    'Meia cano longo (para o quadriciclo)',
-    'Repelente de insetos',
-    'Sandália + tênis fechado',
-  ],
-};
-
-export const travessias = [
+export const circuitos = [
   {
-    name: 'Mini Trekking',
-    duration: '2 dias / 1 noite',
-    summary: 'A versão enxuta. Pra quem só tem fim de semana e não quer perder o pôr do sol na duna.',
+    name: 'Circuito Emendadas',
+    duration: 'Saída às 8h · ~6h',
+    summary: 'O mais completo e pedido. As Lagoas Emendadas formam um espelho d\'água que conecta duas lagoas — a vista de cima é a foto que todo mundo quer.',
     highlights: [
-      'Travessia de balsa no Rio Preguiças',
-      'Banho em 3 lagoas (Esperança, Andorinha, Gaivota)',
-      'Pernoite em pousada simples no oásis Baixa Grande',
-      'Pôr do sol na Lagoa da Gaivota',
-    ],
-    featured: false,
-  },
-  {
-    name: 'Travessia Clássica',
-    duration: '3 dias / 2 noites',
-    summary: 'O roteiro mais pedido. Atravessa Santo Amaro até Atins, dormindo em dois oásis diferentes.',
-    highlights: [
-      '12 guias rodando a equipe (1 guia para cada 6 viajantes)',
-      'Alimentação regional completa (5 refeições)',
-      'Pernoites no oásis Queimada dos Britos e em Atins',
-      'Banho em 8 lagoas diferentes ao longo do caminho',
+      'Parada em 3 lagoas (Emendadas, Preta e da Manga)',
+      'Acesso exclusivo por trilha de areia 4×4',
+      'Pôr do sol com vista panorâmica das dunas',
+      'Guia nativo com rádio de emergência',
     ],
     featured: true,
   },
   {
-    name: 'Travessia Profunda',
-    duration: '4 dias / 3 noites',
-    summary: 'Pra quem quer ver o parque inteiro. Inclui a região do Caburé e a foz do Preguiças.',
+    name: 'Circuito Américas',
+    duration: 'Saída às 7h30 · ~7h',
+    summary: 'O mais remoto da lista. As Lagoas das Américas ficam na região menos visitada do parque, com água azul-turquesa e quase nenhum outro turista.',
     highlights: [
-      'Tudo do roteiro clássico + 1 dia em Caburé',
-      'Travessia de caiaque pelo Preguiças',
-      '3 pernoites em pousadas dos oásis',
-      'Noite de observação de estrelas com mapa do céu',
+      'Uma das lagoas mais cristalinas de Santo Amaro',
+      'Percurso em duna viva — sem trilha marcada',
+      'Almoço simples incluído (marmita regional)',
+      'Máximo 6 pessoas por saída',
     ],
     featured: false,
   },
   {
-    name: 'Imersão Cultural',
-    duration: '5 dias / 4 noites',
-    summary: 'A travessia mais lenta. Foco no encontro com as comunidades dentro e ao redor do parque.',
+    name: 'Circuito Andorinhas',
+    duration: 'Saída às 14h · ~4h',
+    summary: 'O circuito da tarde. Leva o nome dos bandos de andorinhas que cruzam o céu ao entardecer, quando a luz fica laranja e a duna vira palco.',
     highlights: [
-      'Almoço na casa de moradores do Baixa Grande',
-      'Roda de tambor de crioula em Santo Amaro',
-      'Visita a apicultor da Queimada dos Britos',
-      '4 pernoites em pousadas familiares',
+      'Horário ideal para o pôr do sol',
+      'Banho na Lagoa das Andorinhas',
+      'Trilha leve, acessível para todas as idades',
+      'Perfeito pra quem já fez circuito de manhã',
+    ],
+    featured: false,
+  },
+  {
+    name: 'Circuito Betânia',
+    duration: 'Saída às 8h · ~5h',
+    summary: 'Combina natureza e cultura: o percurso passa pela comunidade de Betânia, com parada na lagoa e conversa com os moradores do oásis.',
+    highlights: [
+      'Visita à comunidade quilombola de Betânia',
+      'Banho na lagoa mais tranquila do circuito',
+      'Café da manhã da roça incluído',
+      'Ideal para grupos com crianças',
+    ],
+    featured: false,
+  },
+  {
+    name: 'Circuito Ponta Verde',
+    duration: 'Saída às 8h · ~6h',
+    summary: 'O circuito das surpresas. A Ponta Verde muda de cara entre junho e setembro — nas cheias, a lagoa avança pelas dunas e forma uma paisagem que parece outro planeta.',
+    highlights: [
+      'Lagoa que muda completamente no período de chuvas',
+      'Vista dupla: lagoa de um lado, duna do outro',
+      'Percurso em 4×4 com travessia de areia movediça',
+      'Um dos pontos mais fotografados de Santo Amaro',
+    ],
+    featured: false,
+  },
+  {
+    name: 'Circuito Rancharia',
+    duration: 'Saída às 8h · ~8h',
+    summary: 'O mais longo e o mais fundo no parque. Chega a pontos que nenhum outro operador de Santo Amaro cobre — para quem quer realmente sair do mapa.',
+    highlights: [
+      'O percurso mais extenso disponível em Santo Amaro',
+      'Acesso a 4 lagoas em sequência',
+      'Almoço no oásis Rancharia com família local',
+      'Máximo 6 pessoas, reserva com 48h de antecedência',
     ],
     featured: false,
   },
 ];
 
 export const gallery = [
-  { src: 'https://images.unsplash.com/photo-1601224335112-b86c2226bd34?w=1200&q=80', alt: 'Lagoa azul entre as dunas dos Lençóis Maranhenses' },
-  { src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80', alt: 'Dunas brancas ao entardecer' },
-  { src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80', alt: 'Vista aérea do parque' },
-  { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80', alt: 'Vento moldando a areia' },
-  { src: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=80', alt: 'Caminhada na trilha das lagoas' },
-  { src: 'https://images.unsplash.com/photo-1455218873509-8097305ee378?w=1200&q=80', alt: 'Pôr do sol nas dunas' },
-  { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=80', alt: 'Noite de céu estrelado' },
-  { src: 'https://images.unsplash.com/photo-1542367592-8849eb950fd8?w=1200&q=80', alt: 'Cardume na lagoa cristalina' },
-  { src: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=80', alt: 'Viajantes contemplando o parque' },
+  {
+    src: 'https://images.unsplash.com/photo-1601224335112-b86c2226bd34?w=1200&q=85',
+    alt: 'Lagoa azul cristalina entre as dunas brancas dos Lençóis Maranhenses',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=85',
+    alt: 'Dunas brancas ao entardecer com tons de laranja',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85',
+    alt: 'Vista panorâmica do parque com lagoas e dunas',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=85',
+    alt: 'Vento moldando a superfície das dunas',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=85',
+    alt: 'Trilha de areia em direção às lagoas',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1455218873509-8097305ee378?w=1200&q=85',
+    alt: 'Pôr do sol dourado nas dunas dos Lençóis',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=85',
+    alt: 'Céu estrelado sobre o parque nacional',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=85',
+    alt: 'Grupo de viajantes nas lagoas dos Lençóis',
+  },
 ];
 
 export const faq = [
   {
-    q: 'Qual a melhor época para ir aos Lençóis?',
-    a: 'De junho a setembro as lagoas estão cheias — é o cartão postal. Em outubro e novembro o nível baixa mas o passeio segue bonito e bem mais vazio. De janeiro a maio é época de chuva forte: a paisagem fica verde, mas algumas estradas dentro do parque ficam difíceis.',
+    q: 'Os circuitos saem de onde exatamente?',
+    a: 'Todos os nossos circuitos partem do centro de Santo Amaro do Maranhão. Buscamos em pousadas e pontos combinados dentro da cidade às 7h30 ou 8h, conforme o circuito escolhido.',
   },
   {
-    q: 'Preciso de preparo físico?',
-    a: 'Para os passeios de 4×4 e quadriciclo, não. Já as travessias a pé exigem condicionamento moderado: a gente caminha entre 4 e 12 km por dia em areia, com calor. Se você anda 5 km no plano sem dificuldade, dá conta.',
+    q: 'Qual a melhor época para visitar?',
+    a: 'De julho a setembro as lagoas estão no auge — cheias, azuis e com o visual mais bonito. De outubro a dezembro o nível baixa mas o passeio continua ótimo e bem menos cheio. Janeiro a junho é época de chuva forte, algumas estradas ficam difíceis.',
   },
   {
-    q: 'Onde começa a travessia?',
-    a: 'A maioria dos roteiros começa em Santo Amaro do Maranhão. A gente busca você na pousada às 8h30. Saindo de Barreirinhas, combinamos o transfer separado.',
+    q: 'Os circuitos são adequados para crianças?',
+    a: 'O Circuito Betânia e o Circuito Andorinhas são os mais indicados para famílias com crianças — trilha mais curta, ritmo tranquilo. Para os demais, recomendamos a partir de 10 anos com condicionamento básico.',
   },
   {
-    q: 'O que está incluso no preço?',
-    a: 'Guiamento de ponta a ponta, transporte 4×4 dentro do parque, alimentação do roteiro, pernoites em pousadas de oásis, e seguro viagem. Bebidas alcoólicas e transfer rodoviário até Santo Amaro ficam por sua conta.',
+    q: 'Preciso ter preparo físico?',
+    a: 'Para a maioria dos circuitos, não. O percurso em 4×4 cobre a maior parte da distância. Há trechos curtos a pé na areia (até 2 km). O Circuito Rancharia é o mais exigente — caminhada leve de até 4 km em areia.',
   },
   {
-    q: 'Como faço para reservar?',
-    a: 'Preenche o formulário aqui embaixo ou chama direto no WhatsApp. Trabalhamos com sinal de 30% (Pix ou cartão em até 2×) e o restante até 7 dias antes da viagem.',
+    q: 'Como funciona a reserva?',
+    a: 'Só pelo WhatsApp. Escolhe o circuito, confirma a data e o número de pessoas. Pedimos sinal de 30% no Pix para garantir a vaga. O restante paga no dia.',
   },
   {
-    q: 'Posso cancelar?',
-    a: 'Pode. Até 30 dias antes do passeio: devolvemos 50% do valor pago. Entre 15 e 29 dias: 30%. Menos de 15 dias: sem reembolso, mas a gente remarca por até 12 meses sem custo.',
+    q: 'Posso combinar mais de um circuito?',
+    a: 'Sim, e é muito comum. Vários viajantes ficam 2 ou 3 dias em Santo Amaro e fazem circuitos diferentes. A gente monta um roteiro combinado e dá desconto progressivo a partir do segundo circuito.',
   },
   {
-    q: 'Tem passeio para criança e idoso?',
-    a: 'Sim. Criança a partir de 6 anos vai bem no roteiro de 4×4. Idoso ativo também — temos guia que adapta o ritmo. Para travessias longas a pé, o ideal é a partir de 14 anos.',
+    q: 'E se chover no dia?',
+    a: 'A gente monitora as condições da estrada e avisa com antecedência se precisar reagendar. Chuva leve não cancela — os Lençóis ficam ainda mais bonitos. Chuva forte que inviabilize o acesso: remarcamos sem custo.',
   },
 ];
 
-export const payments = ['Pix', 'Cartão (até 2×)', 'Boleto', 'Dinheiro'];
+export const payments = ['Pix', 'Cartão (até 2×)', 'Dinheiro'];

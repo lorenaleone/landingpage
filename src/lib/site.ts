@@ -1,26 +1,26 @@
 export const site = {
-  name: 'Galego Trekking',
-  tagline: 'Aventura real, nativa e autêntica nos Lençóis Maranhenses',
-  url: 'https://galegotrekking.com.br',
-  whatsapp: '5598988588396',
-  whatsappDisplay: '(98) 98858-8396',
-  email: 'contato@galegotrekking.com.br',
-  instagram: 'agencia_galegotrekking',
+  name: 'Brisa Azul Viagens',
+  shortName: 'Brisa Azul',
+  tagline: 'Circuitos exclusivos nos Lençóis Maranhenses saindo de Santo Amaro',
+  url: 'https://brisaazulviagens.com.br',
+  whatsapp: '5598991234567',
+  whatsappDisplay: '(98) 99123-4567',
+  email: 'contato@brisaazulviagens.com.br',
+  instagram: 'brisaazul.viagens',
   address: {
-    street: 'Rua Nova Brasília, s/n',
+    street: 'Rua da Beira Rio, 142',
     city: 'Santo Amaro do Maranhão',
     state: 'MA',
     zip: '65195-000',
   },
   nav: [
     { label: 'Sobre', href: '#sobre' },
-    { label: 'Modalidades', href: '#modalidades' },
-    { label: 'Travessias', href: '#travessias' },
+    { label: 'Circuitos', href: '#circuitos' },
     { label: 'Galeria', href: '#galeria' },
     { label: 'Dúvidas', href: '#faq' },
-    { label: 'Contato', href: '#reservar' },
+    { label: 'Reservar', href: '#reservar' },
   ],
 };
 
-export const whatsappLink = (msg = 'Olá Galego! Vim pelo site e queria saber sobre as travessias.') =>
+export const whatsappLink = (msg = 'Olá! Vim pelo site e gostaria de saber mais sobre os circuitos da Brisa Azul.') =>
   `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(msg)}`;
