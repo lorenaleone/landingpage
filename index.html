@@ -93,7 +93,6 @@
     }
     .circuit-chip.selected .chip-dot { background: rgba(111,163,182,.7); }
     .chip-dot { width: 5px; height: 5px; border-radius: 9999px; background: rgba(17,23,28,.18); flex-shrink: 0; transition: background .18s; }
-    .chip-dur { font-size: 11px; opacity: .55; }
   </style>
 </head>
 <body>
@@ -248,7 +247,7 @@
           <img src="images/galeria/01.jpg" alt="Circuito Emendadas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
           <span class="absolute top-3 left-3 inline-flex rounded-full bg-lagoon-600 px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Mais procurado</span>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
         </div>
         <!-- conteúdo -->
         <div class="flex flex-col flex-1 p-6">
@@ -267,7 +266,7 @@
         <div class="relative h-48 bg-sand-200 overflow-hidden">
           <img src="images/galeria/02.jpg" alt="Circuito Américas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 7h30 · ~7h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 7h30</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
           <h3 class="font-display text-xl text-ink-900">Circuito Américas</h3>
@@ -285,7 +284,7 @@
         <div class="relative h-48 bg-sand-200 overflow-hidden">
           <img src="images/galeria/03.jpg" alt="Circuito Andorinhas" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 14h · ~4h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 14h</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
           <h3 class="font-display text-xl text-ink-900">Circuito Andorinhas</h3>
@@ -303,7 +302,7 @@
         <div class="relative h-48 bg-sand-200 overflow-hidden">
           <img src="images/galeria/04.jpg" alt="Circuito Betânia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~5h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
           <h3 class="font-display text-xl text-ink-900">Circuito Betânia</h3>
@@ -321,7 +320,7 @@
         <div class="relative h-48 bg-sand-200 overflow-hidden">
           <img src="images/galeria/05.jpg" alt="Circuito Ponta Verde" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
           <h3 class="font-display text-xl text-ink-900">Circuito Ponta Verde</h3>
@@ -339,7 +338,7 @@
         <div class="relative h-48 bg-sand-200 overflow-hidden">
           <img src="images/galeria/06.jpg" alt="Circuito Rancharia" loading="eager" decoding="async" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
-          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~8h</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h</span>
         </div>
         <div class="flex flex-col flex-1 p-6">
           <h3 class="font-display text-xl text-ink-900">Circuito Rancharia</h3>
@@ -426,12 +425,12 @@
       <div class="mb-6" id="circuit-block">
         <p class="text-[10px] uppercase tracking-widest2 text-ink-400 mb-3">Circuito(s) <span class="text-rust-400 normal-case tracking-normal text-[11px]">— selecione um ou mais</span></p>
         <div id="circuit-picker" class="flex flex-wrap gap-2">
-          <button type="button" class="circuit-chip" data-circuit="Emendadas"><span class="chip-dot"></span>Emendadas <span class="chip-dur">~6h</span></button>
-          <button type="button" class="circuit-chip" data-circuit="Américas"><span class="chip-dot"></span>Américas <span class="chip-dur">~7h</span></button>
-          <button type="button" class="circuit-chip" data-circuit="Andorinhas"><span class="chip-dot"></span>Andorinhas <span class="chip-dur">~4h</span></button>
-          <button type="button" class="circuit-chip" data-circuit="Betânia"><span class="chip-dot"></span>Betânia <span class="chip-dur">~5h</span></button>
-          <button type="button" class="circuit-chip" data-circuit="Ponta Verde"><span class="chip-dot"></span>Ponta Verde <span class="chip-dur">~6h</span></button>
-          <button type="button" class="circuit-chip" data-circuit="Rancharia"><span class="chip-dot"></span>Rancharia <span class="chip-dur">~8h</span></button>
+          <button type="button" class="circuit-chip" data-circuit="Emendadas"><span class="chip-dot"></span>Emendadas</button>
+          <button type="button" class="circuit-chip" data-circuit="Américas"><span class="chip-dot"></span>Américas</button>
+          <button type="button" class="circuit-chip" data-circuit="Andorinhas"><span class="chip-dot"></span>Andorinhas</button>
+          <button type="button" class="circuit-chip" data-circuit="Betânia"><span class="chip-dot"></span>Betânia</button>
+          <button type="button" class="circuit-chip" data-circuit="Ponta Verde"><span class="chip-dot"></span>Ponta Verde</button>
+          <button type="button" class="circuit-chip" data-circuit="Rancharia"><span class="chip-dot"></span>Rancharia</button>
         </div>
         <p id="circuit-error" class="mt-2 text-xs text-rust-400 hidden">Selecione ao menos um circuito.</p>
       </div>
