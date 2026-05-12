@@ -397,7 +397,6 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </button>
 
-    <div id="cf-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-sand-100/50 tabular-nums pointer-events-none">1 / 8</div>
   </div>
 
   <div id="cf-dots" class="mt-10 flex justify-center gap-2"></div>
@@ -773,7 +772,6 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
   let active = 0;
   const wrap  = document.getElementById('cf-wrap');
   const dots  = document.getElementById('cf-dots');
-  const counter = document.getElementById('cf-counter');
 
   // build cards
   const cards = photos.map((p, i) => {
@@ -799,9 +797,6 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
   });
 
   function render(){
-    counter.textContent = `${active+1} / ${photos.length}`;
-    document.getElementById('cf-prev').disabled = active===0;
-    document.getElementById('cf-next').disabled = active===photos.length-1;
     cards.forEach((el, i) => {
       const off = i - active;
       const abs = Math.abs(off);
@@ -826,7 +821,7 @@ document.getElementById('booking-form').addEventListener('submit', function(e){
   }
 
   function go(idx){
-    active = Math.max(0, Math.min(photos.length-1, idx));
+    active = ((idx % photos.length) + photos.length) % photos.length;
     render();
   }
 
