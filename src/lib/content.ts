@@ -139,39 +139,19 @@ export const circuitos = [
   },
 ];
 
+// As fotos da galeria ficam em public/images/galeria/01.jpg … 08.jpg
+// Veja o guia em public/images/README.md
+import { images } from './img';
+
 export const gallery = [
-  {
-    src: 'https://images.unsplash.com/photo-1601224335112-b86c2226bd34?w=1200&q=85',
-    alt: 'Lagoa azul cristalina entre as dunas brancas dos Lençóis Maranhenses',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=85',
-    alt: 'Dunas brancas ao entardecer com tons de laranja',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=85',
-    alt: 'Vista panorâmica do parque com lagoas e dunas',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=85',
-    alt: 'Vento moldando a superfície das dunas',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=1200&q=85',
-    alt: 'Trilha de areia em direção às lagoas',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1455218873509-8097305ee378?w=1200&q=85',
-    alt: 'Pôr do sol dourado nas dunas dos Lençóis',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200&q=85',
-    alt: 'Céu estrelado sobre o parque nacional',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=1200&q=85',
-    alt: 'Grupo de viajantes nas lagoas dos Lençóis',
-  },
+  { src: images.galeria(1), alt: 'Circuito Emendadas — lagoas interligadas' },
+  { src: images.galeria(2), alt: 'Circuito Américas — lagoa turquesa remota' },
+  { src: images.galeria(3), alt: 'Circuito Andorinhas — pôr do sol nas dunas' },
+  { src: images.galeria(4), alt: 'Circuito Betânia — comunidade e lagoa' },
+  { src: images.galeria(5), alt: 'Circuito Ponta Verde — vista dupla lagoa e duna' },
+  { src: images.galeria(6), alt: 'Circuito Rancharia — o mais fundo no parque' },
+  { src: images.galeria(7), alt: 'Dunas brancas dos Lençóis Maranhenses' },
+  { src: images.galeria(8), alt: 'Lagoa cristalina ao entardecer' },
 ];
 
 export const faq = [

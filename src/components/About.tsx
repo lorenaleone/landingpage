@@ -1,5 +1,6 @@
 import { about } from '@/lib/content';
 import { whatsappLink } from '@/lib/site';
+import { images } from '@/lib/img';
 
 export function About() {
   return (
@@ -11,7 +12,7 @@ export function About() {
               className="absolute inset-0 bg-cover bg-[center_30%]"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1539768942893-daf53e448371?w=1200&q=85')",
+                  `url('${images.about}')`,
               }}
               role="img"
               aria-label="Marcos Ribeiro, fundador da Brisa Azul Viagens"

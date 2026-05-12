@@ -1,5 +1,6 @@
 import { hero, stats } from '@/lib/content';
 import { whatsappLink } from '@/lib/site';
+import { images } from '@/lib/img';
 
 export function Hero() {
   return (
@@ -9,8 +10,7 @@ export function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1601224335112-b86c2226bd34?w=2000&q=85')",
+            backgroundImage: `url('${images.hero}')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/20 to-ink-900/80" />
