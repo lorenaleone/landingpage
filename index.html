@@ -299,95 +299,116 @@
 
     <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <article class="relative flex flex-col rounded-2xl border border-lagoon-400/50 ring-1 ring-lagoon-400/25 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <span class="absolute -top-3 left-6 inline-flex rounded-full bg-lagoon-600 px-3 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Mais procurado</span>
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">01</span>
-          <span class="eyebrow text-right mt-2">Saída 8h · ~6h</span>
+      <!-- helper SVG check reutilizado via CSS -->
+      <article class="relative flex flex-col rounded-2xl border border-lagoon-400/50 ring-1 ring-lagoon-400/25 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <!-- imagem -->
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/01.jpg" alt="Circuito Emendadas" loading="eager" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute top-3 left-3 inline-flex rounded-full bg-lagoon-600 px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-white font-medium">Mais procurado</span>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Emendadas</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">O mais completo. As Lagoas Emendadas formam um espelho d'água que conecta duas lagoas — a vista de cima é a foto que todo mundo quer.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Parada em 3 lagoas (Emendadas, Preta e Manga)</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Acesso exclusivo por trilha 4×4</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Pôr do sol panorâmico nas dunas</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Emendadas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <!-- conteúdo -->
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Emendadas</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais completo. As Lagoas Emendadas formam um espelho d'água que conecta duas lagoas — a vista de cima é a foto que todo mundo quer.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Parada em 3 lagoas (Emendadas, Preta e Manga)</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Acesso exclusivo por trilha 4×4</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Pôr do sol panorâmico nas dunas</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Emendadas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
-      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">02</span>
-          <span class="eyebrow text-right mt-2">Saída 7h30 · ~7h</span>
+      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/02.jpg" alt="Circuito Américas" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 7h30 · ~7h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Américas</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">O mais remoto. Lagoas azul-turquesa na região menos visitada do parque, com água cristalina e quase nenhum outro turista.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Lagoa mais cristalina de Santo Amaro</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço regional incluído</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas por saída</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Am%C3%A9ricas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Américas</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais remoto. Lagoas azul-turquesa na região menos visitada do parque, com água cristalina e quase nenhum outro turista.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Lagoa mais cristalina de Santo Amaro</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço regional incluído</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas por saída</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Am%C3%A9ricas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
-      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">03</span>
-          <span class="eyebrow text-right mt-2">Saída 14h · ~4h</span>
+      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/03.jpg" alt="Circuito Andorinhas" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 14h · ~4h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Andorinhas</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">O circuito da tarde. Leva o nome dos bandos de andorinhas que cruzam o céu ao entardecer, quando a luz fica laranja e a duna vira palco.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Horário ideal para o pôr do sol</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Trilha leve, acessível para todas as idades</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Perfeito para combinar com outro circuito</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Andorinhas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Andorinhas</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O circuito da tarde. Leva o nome dos bandos de andorinhas que cruzam o céu ao entardecer, quando a luz fica laranja e a duna vira palco.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Horário ideal para o pôr do sol</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Trilha leve, acessível para todas as idades</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Perfeito para combinar com outro circuito</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Andorinhas.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
-      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">04</span>
-          <span class="eyebrow text-right mt-2">Saída 8h · ~5h</span>
+      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/04.jpg" alt="Circuito Betânia" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~5h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Betânia</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">Natureza e cultura: o percurso passa pela comunidade de Betânia, com parada na lagoa e conversa com os moradores do oásis.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Visita à comunidade quilombola de Betânia</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Café da manhã da roça incluído</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Ideal para grupos com crianças</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Bet%C3%A2nia.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Betânia</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">Natureza e cultura: o percurso passa pela comunidade de Betânia, com parada na lagoa e conversa com os moradores do oásis.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Visita à comunidade quilombola de Betânia</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Café da manhã da roça incluído</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Ideal para grupos com crianças</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Bet%C3%A2nia.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
-      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">05</span>
-          <span class="eyebrow text-right mt-2">Saída 8h · ~6h</span>
+      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/05.jpg" alt="Circuito Ponta Verde" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~6h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Ponta Verde</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">O circuito das surpresas. A Ponta Verde muda de cara entre junho e setembro — nas cheias, parece outro planeta.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Vista dupla: lagoa de um lado, duna do outro</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Travessia de areia movediça em 4×4</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Um dos pontos mais fotografados de Santo Amaro</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Ponta+Verde.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Ponta Verde</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O circuito das surpresas. A Ponta Verde muda de cara entre junho e setembro — nas cheias, parece outro planeta.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Vista dupla: lagoa de um lado, duna do outro</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Travessia de areia movediça em 4×4</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Um dos pontos mais fotografados de Santo Amaro</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Ponta+Verde.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
-      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white p-7 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
-        <div class="flex items-start justify-between gap-3">
-          <span class="font-display text-[42px] leading-none text-sand-200 select-none">06</span>
-          <span class="eyebrow text-right mt-2">Saída 8h · ~8h</span>
+      <article class="flex flex-col rounded-2xl border border-ink-900/10 bg-white shadow-sm hover:-translate-y-0.5 hover:shadow-md transition-all duration-200 overflow-hidden">
+        <div class="relative h-48 bg-sand-200 overflow-hidden">
+          <img src="images/galeria/06.jpg" alt="Circuito Rancharia" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 40%,rgba(17,23,28,.45))"></div>
+          <span class="absolute bottom-3 right-3 eyebrow text-sand-50/90 text-[10px]">Saída 8h · ~8h</span>
         </div>
-        <h3 class="mt-4 font-display text-2xl text-ink-900">Circuito Rancharia</h3>
-        <p class="mt-3 text-sm text-ink-700 leading-relaxed flex-1">O mais longo e o mais fundo no parque. Para quem quer realmente sair do mapa — nenhum outro operador de Santo Amaro cobre este trecho.</p>
-        <ul class="mt-5 space-y-2">
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>4 lagoas em sequência</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço no oásis com família local</li>
-          <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas, reserva com 48h</li>
-        </ul>
-        <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Rancharia.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-8 w-full">Reservar este circuito</a>
+        <div class="flex flex-col flex-1 p-6">
+          <h3 class="font-display text-xl text-ink-900">Circuito Rancharia</h3>
+          <p class="mt-2.5 text-sm text-ink-700 leading-relaxed flex-1">O mais longo e o mais fundo no parque. Para quem quer realmente sair do mapa — nenhum outro operador de Santo Amaro cobre este trecho.</p>
+          <ul class="mt-4 space-y-2">
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>4 lagoas em sequência</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Almoço no oásis com família local</li>
+            <li class="flex gap-2.5 text-sm text-ink-800"><svg class="mt-0.5 h-4 w-4 flex-none text-lagoon-500" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L9 11.6l6.3-6.3a1 1 0 0 1 1.4 0z"/></svg>Máximo 6 pessoas, reserva com 48h</li>
+          </ul>
+          <a href="https://wa.me/5598991234567?text=Ol%C3%A1%21+Tenho+interesse+no+Circuito+Rancharia.+Qual+a+disponibilidade%3F" target="_blank" class="btn btn-primary mt-6 w-full">Reservar este circuito</a>
+        </div>
       </article>
 
     </div>
