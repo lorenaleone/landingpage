@@ -2,7 +2,7 @@
 
 Landing page fictícia de agência de turismo nos Lençóis Maranhenses.
 
-🌐 **Acesse online:** [lorenaleone.github.io/landingpage](https://lorenaleone.github.io/landingpage/)
+🌐 **Acesse online:** [lorenaleone.github.io/landingpage](https://lorenaleone.github.io/template_landingpage/)
 
 ---
 
